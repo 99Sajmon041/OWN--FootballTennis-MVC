@@ -1,4 +1,5 @@
 ﻿using FootballTennis.Infrastructure.Database;
+using FootballTennis.Infrastructure.SeedOptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +14,8 @@ public static class InfrastructureServiceRegistration
         {
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         });
+
+        services.AddScoped<DefaultSeeder>();
 
         return services;
     }

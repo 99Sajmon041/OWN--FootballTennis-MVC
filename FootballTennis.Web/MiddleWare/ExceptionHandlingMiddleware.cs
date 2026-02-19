@@ -1,0 +1,134 @@
+﻿using FootballTennis.Application.Common.Exceptions;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+namespace FootballTennis.Web.MiddleWare;
+
+public sealed class ExceptionHandlingMiddleware(ILogger<ExceptionHandlingMiddleware> logger, ITempDataDictionaryFactory tempDataFactory) : IMiddleware
+{
+    public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+    {
+        try
+        {
+            await next(context);
+        }
+        catch (Exception ex)
+        {
+            if (context.Response.HasStarted)
+            {
+                logger.LogError(ex, "Response already started. TraceId: {TraceId}", context.TraceIdentifier);
+                throw;
+            }
+
+            int statusCode;
+            string message;
+
+            MapException(ex, out statusCode, out message);
+
+            logger.Log(
+                GetLogLevel(statusCode),
+                ex,
+                "Handled exception. StatusCode: {StatusCode}, TraceId: {TraceId}, Path: {Path}, Message: {Message}",
+                statusCode,
+                context.TraceIdentifier,
+                context.Request.Path.Value,
+                ex.Message);
+
+            WriteTempData(context, message, statusCode);
+
+            context.Response.Clear();
+            context.Response.StatusCode = statusCode;
+
+            if (statusCode == StatusCodes.Status401Unauthorized)
+            {
+                context.Response.Redirect("/Account/Login");
+                return;
+            }
+
+            if (statusCode == StatusCodes.Status403Forbidden)
+            {
+                context.Response.Redirect("/Home/Forbidden");
+                return;
+            }
+
+            if (statusCode == StatusCodes.Status404NotFound)
+            {
+                context.Response.Redirect("/Home/NotFoundPage");
+                return;
+            }
+
+            context.Response.Redirect("/Home/Error");
+        }
+    }
+
+    private static void MapException(Exception ex, out int statusCode, out string message)
+    {
+        statusCode = StatusCodes.Status500InternalServerError;
+        message = "Došlo k neočekávané chybě.";
+
+        if (ex is NotFoundException nf)
+        {
+            statusCode = StatusCodes.Status404NotFound;
+            message = nf.Message;
+            return;
+        }
+
+        if (ex is ConflictException cf)
+        {
+            statusCode = StatusCodes.Status409Conflict;
+            message = cf.Message;
+            return;
+        }
+
+        if (ex is ForbiddenException fb)
+        {
+            statusCode = StatusCodes.Status403Forbidden;
+            message = fb.Message;
+            return;
+        }
+
+        if (ex is UnauthorizedException un)
+        {
+            statusCode = StatusCodes.Status401Unauthorized;
+            message = un.Message;
+            return;
+        }
+
+        if (ex is ValidationException ve)
+        {
+            statusCode = StatusCodes.Status400BadRequest;
+            message = ve.Message;
+            return;
+        }
+
+        if (ex is DomainException de)
+        {
+            statusCode = StatusCodes.Status400BadRequest;
+            message = de.Message;
+            return;
+        }
+
+        if (ex is ArgumentException ae)
+        {
+            statusCode = StatusCodes.Status400BadRequest;
+            message = ae.Message;
+        }
+    }
+
+    private void WriteTempData(HttpContext context, string message, int statusCode)
+    {
+        var tempData = tempDataFactory.GetTempData(context);
+        tempData["Error"] = message;
+        tempData["StatusCode"] = statusCode;
+        tempData["TraceId"] = context.TraceIdentifier;
+    }
+
+    private static LogLevel GetLogLevel(int statusCode)
+    {
+        if (statusCode >= 500)
+        {
+            return LogLevel.Error;
+        }
+
+        return LogLevel.Warning;
+    }
+}

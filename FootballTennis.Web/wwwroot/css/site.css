@@ -29,3 +29,20 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.nav-pill {
+    color: #000 !important;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-pill:hover {
+    background-color: #f2f2f2;
+    transform: translateY(-1px);
+}
+
+.active-pill {
+    background-color: #000;
+    color: #fff !important;
+}

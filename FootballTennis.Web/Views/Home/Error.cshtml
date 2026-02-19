@@ -1,0 +1,32 @@
+﻿@model ErrorModel
+
+@{
+    ViewData["Title"] = "Chyba";
+}
+
+<h1 class="display-6">Nastala chyba</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.Message))
+{
+    <div class="alert alert-danger mt-3">
+        @Model.Message
+    </div>
+}
+else
+{
+    <div class="alert alert-danger mt-3">
+        Došlo k chybě při zpracování požadavku.
+    </div>
+}
+
+@if (Model.StatusCode.HasValue)
+{
+    <p class="text-muted mb-1">Status kód: <strong>@Model.StatusCode</strong></p>
+}
+
+@if (Model.ShowTraceId())
+{
+    <p class="text-muted">TraceId: <code>@Model.TraceId</code></p>
+}
+
+<a class="btn btn-outline-primary mt-3" asp-controller="Home" asp-action="Index">Zpět domů</a>
