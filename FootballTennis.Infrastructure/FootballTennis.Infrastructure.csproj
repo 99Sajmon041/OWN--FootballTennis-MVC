@@ -22,10 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FootballTennis.Domain\FootballTennis.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\FootballTennis.Shared\FootballTennis.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
-﻿using FootballTennis.Infrastructure.Database;
+﻿using FootballTennis.Domain.Interfaces;
+using FootballTennis.Infrastructure.Database;
+using FootballTennis.Infrastructure.Repositories;
 using FootballTennis.Infrastructure.SeedOptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,6 +18,8 @@ public static class InfrastructureServiceRegistration
         });
 
         services.AddScoped<DefaultSeeder>();
+
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }
