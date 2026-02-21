@@ -1,4 +1,5 @@
-﻿using FootballTennis.Domain.Enums;
+﻿using FootballTennis.Domain.Entities;
+using FootballTennis.Domain.Enums;
 using FootballTennis.Domain.Interfaces;
 using FootballTennis.Infrastructure.Database;
 using FootballTennis.Shared.ReadModels;
@@ -12,7 +13,6 @@ public sealed class PlayerRepository(FootballTennisDbContext context) : IPlayerR
     {
         return await context.Players
             .AsNoTracking()
-            .OrderBy(x => x.FullName)
             .Select(x => new PlayerStatsReadModel
             {
                 PlayerId = x.Id,
@@ -22,6 +22,29 @@ public sealed class PlayerRepository(FootballTennisDbContext context) : IPlayerR
                 SecondCount = x.TeamPlayers.Count(x => x.Tournament.Status == Status.Finished && x.Team.Position == 2),
                 ThirdCount = x.TeamPlayers.Count(x => x.Tournament.Status == Status.Finished && x.Team.Position == 3)
             })
+            .OrderByDescending(x => x.FirstCount)
             .ToListAsync(ct);
+    }
+
+    public async Task AddPlayerAsync(Player player, CancellationToken ct)
+    {
+        await context.Players.AddAsync(player, ct);
+    }
+
+    public async Task<bool> ExistsPlayerWithSameNameAsync(string fullName, CancellationToken ct)
+    {
+        fullName = fullName.Trim();
+        return await context.Players.AnyAsync(x => x.FullName == fullName, ct);
+    }
+
+    public void DeletePlayer(Player player, CancellationToken ct)
+    {
+        ct.ThrowIfCancellationRequested();
+        context.Players.Remove(player);
+    }
+
+    public async Task<Player?> GetPlayerByIdAsync(int playerId, CancellationToken ct)
+    {
+        return await context.Players.FirstOrDefaultAsync(x => x.Id == playerId, ct);
     }
 }

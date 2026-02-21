@@ -7,8 +7,14 @@ using FootballTennis.Infrastructure.Identity;
 using FootballTennis.Infrastructure.SeedOptions;
 using FootballTennis.Web.MiddleWare;
 using Microsoft.AspNetCore.Identity;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, services, configuration) =>
+{
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
@@ -29,21 +35,16 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<ITournamentService, TournamentService>();
+builder.Services.AddScoped<IPlayerService, PlayerService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.LoginPath = "/Account/login";
+    options.LoginPath = "/Account/Login";
     options.AccessDeniedPath = "/Account/AccessDenied";
 });
 
 builder.Services.AddControllersWithViews();
-
-builder.Logging.ClearProviders();
-builder.Logging.AddSimpleConsole(options =>
-{
-    options.TimestampFormat = "yyyy-MM-dd HH:mm:ss";
-    options.SingleLine = true;
-});
 
 builder.Services.AddSession();
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
@@ -74,4 +75,11 @@ app.UseAuthorization();
 
 app.MapDefaultControllerRoute();
 
-app.Run();
+try
+{
+    app.Run();
+}
+finally
+{
+    Log.CloseAndFlush();
+}

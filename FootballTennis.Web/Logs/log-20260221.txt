@@ -1,0 +1,112 @@
+[2026-02-21 15:01:42 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 15:01:42 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 15:01:47 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 15:01:48 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 15:01:52 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 15:01:57 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 15:02:01 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 15:02:04 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 15:02:30 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 16:29:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 16:30:27 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 16:32:10 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 16:32:46 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 16:59:51 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 16:59:56 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:00:33 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 17:00:34 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 17:00:41 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:00:50 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 3 was deleted.
+[2026-02-21 17:00:50 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 17:00:56 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 17:01:06 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 2 was updated successfully.
+[2026-02-21 17:01:06 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 17:01:13 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 2 was updated successfully.
+[2026-02-21 17:01:13 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 17:02:02 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 17:02:02 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 17:02:04 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 17:02:14 INF] FootballTennis.Application.Services.Implementations.PlayerService Admin create player with name: Václav harmáček
+[2026-02-21 17:02:14 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:20 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 4 was updated successfully.
+[2026-02-21 17:02:20 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:27 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 4 was deleted.
+[2026-02-21 17:02:27 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 17:02:31 INF] FootballTennis.Application.Services.Implementations.PlayerService Admin create player with name: Václav Harmáček
+[2026-02-21 17:02:31 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:35 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 17:02:37 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:37 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 17:02:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:47 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 17:02:48 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:51 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 17:02:54 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:49:26 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 18:49:26 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:49:34 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 18:49:54 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:50:57 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 18:51:17 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:51:18 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 18:55:13 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 18:55:13 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:55:15 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 18:55:15 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 18:55:21 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:55:25 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 18:55:30 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:57:34 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 18:57:34 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 18:57:44 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:00:39 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 19:00:40 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:00:43 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:36:36 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 19:36:36 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:36:38 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:36:45 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:37:19 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:37:33 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:37:34 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:39:21 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:50:45 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 19:50:52 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 19:50:53 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:50:54 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:51:42 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 19:51:45 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:51:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:51:58 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 19:54:14 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 19:54:15 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:54:26 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:55:02 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:55:38 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 19:55:52 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:56:01 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 2 was updated successfully.
+[2026-02-21 19:56:01 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:56:05 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 2 was deleted.
+[2026-02-21 19:56:05 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 2
+[2026-02-21 19:56:11 INF] FootballTennis.Application.Services.Implementations.PlayerService Admin create player with name: Lukáš Buben
+[2026-02-21 19:56:11 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:56:22 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:56:24 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:56:29 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:56:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:56:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:56:44 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 19:56:47 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:57:02 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 19:57:20 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 19:57:23 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 20:11:28 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 20:36:44 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 20:36:47 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-02-21 20:36:47 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 20:37:02 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-02-21 20:37:05 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 5
+[2026-02-21 20:37:07 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 20:37:16 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 6 was updated successfully.
+[2026-02-21 20:37:16 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3
+[2026-02-21 20:38:20 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 3

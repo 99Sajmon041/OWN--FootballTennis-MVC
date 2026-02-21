@@ -1,0 +1,33 @@
+﻿@model UpsertPlayerViewModel
+
+<div class="text-center mb-5">
+    <h1 class="display-4">Úprava hráče</h1>
+</div>
+
+<form asp-action="Update" asp-controller="Player" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="mb-3">
+                <label asp-for="FullName" class="form-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-outline-primary" asp-action="Index" asp-controller="Player">
+                    Zpět
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                    Upravit
+                </button>
+            </div>
+
+        </div>
+    </div>
+</form>

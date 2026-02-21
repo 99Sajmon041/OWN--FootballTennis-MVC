@@ -5,28 +5,31 @@
     <h1 class="display-4">Seznam turnajů</h1>
 </div>
 
-<div class="d-flex justify-content-end my-2">
-    <a type="button" class="btn btn-primary" asp-controller="Tournaments" asp-action="Create">
+@if(User.IsInRole(nameof(AdminRole.Admin)))
+{
+    <div class="d-flex justify-content-end my-2">
+    <a type="button" class="btn btn-primary" asp-controller="Tournament" asp-action="Create">
         Přidat turnaj
     </a>
 </div>
+}
 
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Název turnaje</th>
-            <th>Místo konání</th>
-            <th>Datum</th>
-            <th>Status</th>
-            <th>Počet teamů</th>
-            <th>Počet zápasů</th>
-            <th>Vítěz</th>
+            <th>@Html.DisplayNameFor(m => m[0].Id)</th>
+            <th>@Html.DisplayNameFor(m => m[0].Name)</th>
+            <th>@Html.DisplayNameFor(m => m[0].Address)</th>
+            <th>@Html.DisplayNameFor(m => m[0].Date)</th>
+            <th>@Html.DisplayNameFor(m => m[0].Status)</th>
+            <th>@Html.DisplayNameFor(m => m[0].TeamsCount)</th>
+            <th>@Html.DisplayNameFor(m => m[0].MatchesCount)</th>
+            <th>@Html.DisplayNameFor(m => m[0].WinnerName)</th>
             <th>Akce</th>
         </tr>
     </thead>
     <tbody>
-        @if(Model.Count > 0 || Model is not null)
+        @if(Model.Count > 0 && Model is not null)
         {
             @foreach (var item in Model)
             {
@@ -34,7 +37,7 @@
                     <td>@item.Id</td>
                     <td>@item.Name</td>
                     <td>@item.Address</td>
-                    <td>@item.Date.ToString("yyyy.MM.dd")</td>
+                    <td>@item.Date.ToString("dd.MM.yyyy")</td>
                     <td>@EnumHelper.GetCzechStatusName(item.Status)</td>
                     <td>@item.TeamPlayersCount</td>
                     <td>@(item.TeamsCount == 0 ? "Zatím nejsou teamy" : item.TeamsCount)</td>
