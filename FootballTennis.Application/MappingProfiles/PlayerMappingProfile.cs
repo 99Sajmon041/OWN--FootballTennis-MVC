@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FootballTennis.Application.Models.Player;
+using FootballTennis.Application.Models.Team;
 using FootballTennis.Domain.Entities;
 using FootballTennis.Shared.ReadModels;
 
@@ -17,5 +18,7 @@ public sealed class PlayerMappingProfile : Profile
         CreateMap<Player, UpsertPlayerViewModel>();
 
         CreateMap<Player, PlayerViewModel>();
+
+        CreateMap<Player, PlayerOptionViewModel>();
     }
 }

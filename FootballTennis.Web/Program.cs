@@ -1,6 +1,4 @@
 using FootballTennis.Application.Extensions;
-using FootballTennis.Application.Services.Implementations;
-using FootballTennis.Application.Services.Interfaces;
 using FootballTennis.Infrastructure.Database;
 using FootballTennis.Infrastructure.Extensions;
 using FootballTennis.Infrastructure.Identity;
@@ -33,10 +31,6 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 })
 .AddEntityFrameworkStores<FootballTennisDbContext>()
 .AddDefaultTokenProviders();
-
-builder.Services.AddScoped<ITournamentService, TournamentService>();
-builder.Services.AddScoped<IPlayerService, PlayerService>();
-builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {

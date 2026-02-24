@@ -1,15 +1,15 @@
 ﻿@model TournamentUpsertViewModel
 
 @{
-    ViewData["Title"] = "Vytvoření turnaje";
+    ViewData["Title"] = "Úprava turnaje";
 }
 
 <div class="text-center mb-5">
-    <h1 class="display-4">Vytvoření turnaje</h1>
+    <h1 class="display-4">Úprava turnaje</h1>
 </div>
 
-<form asp-controller="Tournament" asp-action="Create" method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
+<form asp-controller="Tournament" asp-action="Update" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     @Html.AntiForgeryToken()
 
     <div class="row justify-content-center">
@@ -39,15 +39,18 @@
                 <span asp-validation-for="TeamPlayersCount" class="text-danger"></span>
             </div>
 
+            <input asp-for="Id" type="hidden" />
+
             <div class="d-flex justify-content-between">
-                <a class="btn btn-outline-primary" asp-action="index" asp-controller="Tournament">
+                <a class="btn btn-outline-primary" asp-action="Index" asp-controller="Tournament">
                     Zpět
                 </a>
 
-                <button class="btn btn-primary" type="submit">
-                    Vytvořit
+                <button type="submit" class="btn btn-primary">
+                    Upravit
                 </button>
             </div>
+
         </div>
     </div>
 </form>

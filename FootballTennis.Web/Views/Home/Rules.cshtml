@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Turnajová pravidla";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-4">Pravidla používání aplikace pro turnaje</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+
+        <div class="alert alert-info">
+            Tato aplikace slouží pro správu nohejbalových turnajů (systém „každý s každým“).
+        </div>
+
+        <h4 class="mt-4">Základní pravidla turnaje</h4>
+        <ul>
+            <li><strong>Počet týmů:</strong> minimálně 3, maximálně dle domluvy.</li>
+            <li><strong>Počet hráčů v týmu:</strong> 2 až 4 (jiná možnost není).</li>
+            <li><strong>Systém:</strong> každý tým hraje proti každému (round-robin).</li>
+        </ul>
+
+        <h4 class="mt-4">Pravidla zápasu</h4>
+        <ul>
+            <li><strong>Set do 11 bodů</strong>, případně „na rozdíl“ (např. 11:13).</li>
+            <li><strong>Hraje se na 2 vítězné sety</strong> (maximálně 3 sety).</li>
+            <li>Pokud po 2 setech vyjde stav <strong>1:1</strong>, musí se odehrát <strong>3. set</strong>.</li>
+            <li>Pokud je po 2 setech <strong>2:0</strong>, 3. set se nehraje.</li>
+        </ul>
+
+        <h4 class="mt-4">Logika doplňování 3. setu</h4>
+        <ul>
+            <li>Když po vyplnění 2. setu vznikne stav <strong>1:1</strong>, aplikace zobrazí možnost (a povinnost) vyplnit <strong>3. set</strong>.</li>
+            <li>
+                Při zpětné úpravě výsledků platí:
+                <ul>
+                    <li>pokud se změní stav z <strong>2:0</strong> na <strong>1:1</strong>, aplikace vytvoří/aktivuje <strong>3. set</strong>, který musí být dohrán.</li>
+                </ul>
+            </li>
+            <li><strong>Bodové statistiky pro pořadí</strong> se počítají pouze z <strong>1. a 2. setu</strong> (3. set se do bodů pro pořadí nezapočítává).</li>
+        </ul>
+
+        <h4 class="mt-4">Určení pořadí v tabulce</h4>
+        <ol>
+            <li><strong>Počet vyhraných zápasů</strong></li>
+            <li><strong>Rozdíl setů</strong> (vyhrané − prohrané)</li>
+            <li><strong>Součet bodů v prohraných setech</strong> (kdo „prohrával nejlépe“, jde výš)</li>
+        </ol>
+
+        <h4 class="mt-4">Logika kol a počtu zápasů</h4>
+        <ul>
+            <li><strong>Počet kol:</strong> počet týmů − 1</li>
+            <li><strong>Počet zápasů v kole:</strong> počet týmů / 2</li>
+            <li><strong>Celkový počet unikátních zápasů:</strong> (počet týmů × (počet týmů − 1)) / 2</li>
+        </ul>
+
+        <div class="alert alert-secondary mt-4">
+            <strong>Příklad:</strong> 10 týmů → kol: 9, zápasů v kole: 5 → celkem 45 unikátních zápasů.
+        </div>
+
+    </div>
+</div>

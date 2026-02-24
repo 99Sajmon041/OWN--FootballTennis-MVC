@@ -37,14 +37,25 @@ public sealed class PlayerRepository(FootballTennisDbContext context) : IPlayerR
         return await context.Players.AnyAsync(x => x.FullName == fullName, ct);
     }
 
-    public void DeletePlayer(Player player, CancellationToken ct)
+    public async Task<bool> ExistsWithSameNameExceptId(int playerId, string playerName, CancellationToken ct)
     {
-        ct.ThrowIfCancellationRequested();
+        return await context.Players.AnyAsync(x => x.FullName == playerName && x.Id != playerId, ct);
+    }
+
+    public void DeletePlayer(Player player)
+    {
         context.Players.Remove(player);
     }
 
     public async Task<Player?> GetPlayerByIdAsync(int playerId, CancellationToken ct)
     {
         return await context.Players.FirstOrDefaultAsync(x => x.Id == playerId, ct);
+    }
+
+    public async Task<List<Player>> GetAllPlayersAsync(CancellationToken ct)
+    {
+        return await context.Players
+            .OrderBy(x => x.FullName)
+            .ToListAsync(ct);
     }
 }

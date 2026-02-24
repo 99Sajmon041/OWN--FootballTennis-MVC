@@ -29,6 +29,11 @@ namespace FootballTennis.Web.Controllers
             return View(model);
         }
 
+        public IActionResult Rules()
+        {
+            return View();
+        }
+
         public IActionResult Forbidden()
         {
             return View();

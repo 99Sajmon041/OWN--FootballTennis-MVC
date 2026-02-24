@@ -51,23 +51,7 @@ public sealed class PlayerService(
             throw new NotFoundException($"Hráč s ID: {playerId} nebyl nalezen.");
         }
 
-        unitOfWork.PlayerRepository.DeletePlayer(player, ct);
-
-        await unitOfWork.SaveChangesAsync(ct);
-
-        logger.LogInformation("Player with ID: {PlayerId} was deleted.", playerId);
-    }
-
-    public async Task UpdatePlayerAsync(int playerId, CancellationToken ct)
-    {
-        var player = await unitOfWork.PlayerRepository.GetPlayerByIdAsync(playerId, ct);
-        if (player is null)
-        {
-            logger.LogWarning("Player with ID: {PlayerId} was not found.", playerId);
-            throw new NotFoundException($"Hráč s ID: {playerId} nebyl nalezen.");
-        }
-
-        unitOfWork.PlayerRepository.DeletePlayer(player, ct);
+        unitOfWork.PlayerRepository.DeletePlayer(player);
 
         await unitOfWork.SaveChangesAsync(ct);
 
@@ -88,11 +72,20 @@ public sealed class PlayerService(
 
     public async Task UpdatePlayerAsync(int playerId, UpsertPlayerViewModel model, CancellationToken ct)
     {
+        model.FullName = model.FullName.Trim();
+
         var player = await unitOfWork.PlayerRepository.GetPlayerByIdAsync(playerId, ct);
         if (player is null)
         {
             logger.LogWarning("Player with ID: {PlayerId} was not found.", playerId);
             throw new NotFoundException($"Hráč s ID: {playerId} nebyl nalezen.");
+        }
+
+        var existsWithSameName = await unitOfWork.PlayerRepository.ExistsWithSameNameExceptId(playerId, model.FullName, ct);
+        if (existsWithSameName)
+        {
+            logger.LogWarning("Player with same name already exists. Player ID: {PlayerId}, name: {PlayerName}.", playerId, model.FullName);
+            throw new ConflictException("Již existuje hráč se stejným jménem.");
         }
 
         mapper.Map(model, player);

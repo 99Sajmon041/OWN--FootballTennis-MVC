@@ -22,10 +22,10 @@ public sealed class AccountService(
             return false;
         }
 
-        if (user.IsLoggedIn)
+        if (user.IsLoggedIn && user.LastActivityUtc > DateTime.UtcNow.AddMinutes(-15))
         {
             logger.LogWarning("Login blocked. User {Email} is already logged in. Last activity: {LastActivityUtc}",user.Email, user.LastActivityUtc); 
-            throw new ConflictException("Uživatel je již přihlášen jinde - nejprve je třeba se odhlásit na jiném zařízení. ");
+            throw new ConflictException("Uživatel je již přihlášen jinde - nejprve je třeba se odhlásit na jiném zařízení nebo počkejte 15 minut. ");
         }
 
         var loginResult = await signInManager.PasswordSignInAsync(user, model.Password, false, false);

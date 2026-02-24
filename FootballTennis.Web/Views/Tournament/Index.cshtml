@@ -1,5 +1,8 @@
 ﻿@model List<TournamentListItemViewModel>
 
+@{
+    ViewData["Title"] = "Turnaje";
+}
 
 <div class="text-center mb-5">
     <h1 class="display-4">Seznam turnajů</h1>
@@ -14,55 +17,104 @@
 </div>
 }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(m => m[0].Id)</th>
-            <th>@Html.DisplayNameFor(m => m[0].Name)</th>
-            <th>@Html.DisplayNameFor(m => m[0].Address)</th>
-            <th>@Html.DisplayNameFor(m => m[0].Date)</th>
-            <th>@Html.DisplayNameFor(m => m[0].Status)</th>
-            <th>@Html.DisplayNameFor(m => m[0].TeamsCount)</th>
-            <th>@Html.DisplayNameFor(m => m[0].MatchesCount)</th>
-            <th>@Html.DisplayNameFor(m => m[0].WinnerName)</th>
-            <th>Akce</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if(Model.Count > 0 && Model is not null)
-        {
-            @foreach (var item in Model)
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(m => m[0].Id)</th>
+                <th>@Html.DisplayNameFor(m => m[0].Name)</th>
+                <th>@Html.DisplayNameFor(m => m[0].Address)</th>
+                <th>@Html.DisplayNameFor(m => m[0].Date)</th>
+                <th>@Html.DisplayNameFor(m => m[0].Status)</th>
+                <th>@Html.DisplayNameFor(m => m[0].TeamPlayersCount)</th>
+                <th>@Html.DisplayNameFor(m => m[0].TeamsCount)</th>
+                <th>@Html.DisplayNameFor(m => m[0].MatchesCount)</th>
+                <th>@Html.DisplayNameFor(m => m[0].WinnerName)</th>
+                <th>Akce</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model is not null && Model.Count > 0)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                        <td>@item.Date.ToString("dd.MM.yyyy")</td>
+                        <td>@EnumHelper.GetCzechStatusName(item.Status)</td>
+                        <td>@item.TeamPlayersCount</td>
+                        <td>@(item.TeamsCount == 0 ? "Zatím nejsou teamy" : item.TeamsCount)</td>
+                        <td>@(item.MatchesCount == 0 ? "Zatím nejsou zápasy" : item.MatchesCount)</td>
+                        <td>@(item.WinnerName is null ? "Zatím není" : item.WinnerName)</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2 flex-nowrap">
+                                <a class="btn btn-sm btn-outline-info"
+                                   asp-controller="Tournament"
+                                   asp-action="Detail"
+                                   asp-route-id="@item.Id">
+                                    @(User.Identity?.IsAuthenticated == true ? "Správa" : "Detail")
+                                </a>
+
+                                @if (User.IsInRole(nameof(AdminRole.Admin)))
+                                {
+                                    @if (item.TeamsCount == 0)
+                                    {
+                                        <form asp-controller="Tournament"
+                                              asp-action="Delete"
+                                              asp-route-id="@item.Id"
+                                              method="post"
+                                              class="d-inline"
+                                              onsubmit="return confirm('Opravdu chcete turnaj: @item.Name smazat?');">
+
+                                            @Html.AntiForgeryToken()
+
+                                            <button type="submit" class="btn btn-sm btn-danger">
+                                                Smazat
+                                            </button>
+                                        </form>
+
+                                        <a class="btn btn-sm btn-warning"
+                                           asp-controller="Tournament"
+                                           asp-action="Update"
+                                           asp-route-id="@item.Id">
+                                            Upravit
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <button type="button" class="btn btn-sm btn-danger" disabled>
+                                            Smazat
+                                        </button>
+
+                                        <button type="button" class="btn btn-sm btn-warning" disabled>
+                                            Upravit
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="text-danger fw-bold">Nemáte oprávnění</span>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
             {
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
-                    <td>@item.Address</td>
-                    <td>@item.Date.ToString("dd.MM.yyyy")</td>
-                    <td>@EnumHelper.GetCzechStatusName(item.Status)</td>
-                    <td>@item.TeamPlayersCount</td>
-                    <td>@(item.TeamsCount == 0 ? "Zatím nejsou teamy" : item.TeamsCount)</td>
-                    <td>@(item.MatchesCount == 0 ? "Zatím nejsou zápasy" : item.MatchesCount)</td>
-                    <td>@(item.WinnerName is null ? "Zatím není" : item.WinnerName)</td>
-                    <td>
-                        <a class="btn btn-sm btn-outline-info" asp-controller="Tournament" asp-action="Detail" asp-route-id="@item.Id">
-                            Detail
-                        </a>
+                    <td colspan="9">
+                        <div class="alert alert-warning mb-0">
+                            Zatím není žádný turnaj
+                        </div>
                     </td>
                 </tr>
             }
-        }
-        else
-        {
-            <tr>
-                <td colspan="9">
-                    <div class="alert alert-warning mb-0">
-                        Zatím není žádný turnaj
-                    </div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
 
 
 <div class="d-flex justify-content-start mt-3">

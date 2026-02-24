@@ -1,0 +1,216 @@
+﻿@model TournamentDetailViewModel
+
+@{
+    ViewData["Title"] = "Správa a detail turnaje";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-4">Detail a správa turnaje</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+
+                <dl class="row mb-0">
+                    <dt class="col-sm-4">ID</dt>
+                    <dd class="col-sm-8">@Model.Id</dd>
+
+                    <dt class="col-sm-4">Název</dt>
+                    <dd class="col-sm-8">@Model.Name</dd>
+
+                    <dt class="col-sm-4">Místo</dt>
+                    <dd class="col-sm-8">@Model.Address</dd>
+
+                    <dt class="col-sm-4">Datum</dt>
+                    <dd class="col-sm-8">@Model.Date.ToString("dd.MM.yyyy")</dd>
+
+                    <dt class="col-sm-4">Počet hráčů v týmu</dt>
+                    <dd class="col-sm-8">@Model.TeamPlayersCount</dd>
+
+                    <dt class="col-sm-4">Počet týmů</dt>
+                    <dd class="col-sm-8">
+                        @(Model.TeamsCount == 0 ? "Zatím nejsou týmy" : Model.TeamsCount.ToString())
+                    </dd>
+
+                    <dt class="col-sm-4">Počet kol</dt>
+                    <dd class="col-sm-8">
+                        @(Model.Status == Status.Scheduled ? "Turnaj není zahájen" : Model.RoundsCount.ToString())
+                    </dd>
+
+                    <dt class="col-sm-4">Počet zápasů</dt>
+                    <dd class="col-sm-8">
+                        @(Model.Status == Status.Scheduled ? "Turnaj není zahájen" : Model.MatchesCount.ToString())
+                    </dd>
+
+                    <dt class="col-sm-4">Počet zápasů na tým</dt>
+                    <dd class="col-sm-8">
+                        @(
+                            Model.Status == Status.Scheduled ? "Turnaj není zahájen" : $"{Model.TeamsCount - 1}"
+                        )
+                    </dd>
+                </dl>
+
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header fw-semibold">
+                Týmy
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(x => x.Teams[0].Id)</th>
+                            <th>@Html.DisplayNameFor(x => x.Teams[0].Name)</th>
+                            <th>@Html.DisplayNameFor(x => x.Teams[0].TeamPlayers)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(Model.TeamsCount > 0)
+                        {
+                            @foreach(var team in Model.Teams)
+                            {
+                                <tr>
+                                    <td>@team.Id</td>
+                                    <td>@team.Name</td>
+                                    <td>
+                                        @CollectionHelper.GetTeamPlayersAsString(team.TeamPlayers)
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center py-4">
+                                    <div class="alert alert-secondary mb-0">
+                                        Zatím nejsou žádné týmy.
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @if (Model.Status == Status.Scheduled && User.IsInRole(nameof(AdminRole.Admin)))
+        {
+            <div class="d-flex justify-content-end mb-3">
+                <a class="btn btn-primary" asp-controller="Team" asp-action="Create" asp-route-tournamentId="@Model.Id" asp-route-teamPlayersCount="@Model.TeamPlayersCount">
+                    Přidat tým
+                </a>
+            </div>
+        }
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header fw-semibold">
+                Zápasy
+            </div>
+            <div class="card-body">
+                <table class="table @(Model.MatchesCount > 0 ? "table-striped" : "table-borderless") mb-0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(x => x.Matches[0].TeamOneName)</th>
+                            <th>@Html.DisplayNameFor(x => x.Matches[0].TeamTwoName)</th>
+                            <th>@Html.DisplayNameFor(x => x.Matches[0].IsPlayed)</th>
+                            <th>@Html.DisplayNameFor(x => x.Matches[0].ScoreText)</th>
+                            <th>@Html.DisplayNameFor(x => x.Matches[0].Order)</th>
+                            <th>Akce</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.MatchesCount > 0)
+                        {
+                            @foreach (var match in Model.Matches)
+                            {
+                                <tr>
+                                    <td>@match.TeamOneName</td>
+                                    <td>@match.TeamTwoName</td>
+                                    <td>@(match.IsPlayed ? "Odehráno" : "Nehráno")</td>
+                                    <td class="text-center">
+                                        @if (match.IsPlayed)
+                                        {
+                                            <span class="badge bg-success px-3 py-2 rounded-pill">
+                                                @match.ScoreText
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">@match.ScoreText</span>
+                                        }
+                                    </td>
+                                    <td class="text-center">@match.Order</td>
+                                    <td>
+                                        @if (User.IsInRole(nameof(AdminRole.Admin)))
+                                        {
+                                            @if (Model.Status == Status.InProgress)
+                                            {
+                                                <a class="btn btn-sm btn-primary" asp-controller="" asp-action="" asp-route-id="@match.Id">
+                                                    Upravit
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">Úprava je dostupná jen během turnaje</span>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="text-danger fw-bold">Nemáte oprávnění</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center py-4">
+                                    <div class="alert alert-secondary mb-0">
+                                        Zatím nejsou žádné zápasy.
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @if (Model.Status == Status.Scheduled && User.IsInRole(nameof(AdminRole.Admin)) && Model.TeamsCount >= 3)
+        {
+            <div class="d-flex justify-content-end mb-3">
+                <a class="btn btn-success" asp-controller="Tournament" asp-action="CreateMatches" asp-route-id="@Model.Id">
+                    Vygenerovat zápasy (zahájit turnaj)
+                </a>
+            </div>
+        }
+
+        @if (Model.Status == Status.Scheduled)
+        {
+            <p class="text-muted small text-center mt-2 mb-0">
+                Turnaj ještě není zahájen. Nejdřív vytvořte týmy (minimálně 3).
+                Jakmile budou týmy připravené, můžete vygenerovat zápasy – tím se turnaj automaticky zahájí.
+            </p>
+        }
+
+        <div class="d-flex justify-content-between">
+            <a class="btn btn-outline-primary" asp-action="Index" asp-controller="Tournament">
+                Zpět
+            </a>
+
+            @if (Model.Status != Status.Scheduled)
+            {
+                <a class="btn btn-primary" asp-action="Statistics" asp-controller="Tournament" asp-route-id="@Model.Id">
+                    Tabulka / Statistiky
+                </a>
+            }
+        </div>
+
+    </div>
+</div>
