@@ -11,4 +11,5 @@ public interface ITournamentRepository
     Task<bool> ExistsWithSameNameExceptId(int tournamentId, string tournamentName, CancellationToken ct);
     Task<Tournament?> GetTournamentByIdAsync(int tournamentId, CancellationToken ct);
     Task<Tournament?> GetTournamentWithDetailsAsync(int tournamentId, CancellationToken ct);
+    Task<bool> IsTournamentStatusScheduled(int tournamentId, CancellationToken ct);
 }

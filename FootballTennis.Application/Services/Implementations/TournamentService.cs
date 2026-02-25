@@ -59,6 +59,12 @@ public sealed class TournamentService(
             throw new NotFoundException("Turnaj nebyl nalezen.");
         }
 
+        if (tournament.Teams.Count > 0)
+        {
+            logger.LogWarning("Tournament with at least one team is not possible to edit. Tournament ID: {TournamentId}, name: {TournamentName}.", tournamentId, model.Name);
+            throw new ConflictException("Turnaj s alespoň jedním týmem již není možné upravovat.");
+        }
+
         var existsWithSameName = await unitOfWork.TournamentRepository.ExistsWithSameNameExceptId(tournamentId, model.Name, ct);
         if (existsWithSameName)
         {

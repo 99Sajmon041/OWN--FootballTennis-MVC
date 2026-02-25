@@ -67,6 +67,9 @@
                             <th>@Html.DisplayNameFor(x => x.Teams[0].Id)</th>
                             <th>@Html.DisplayNameFor(x => x.Teams[0].Name)</th>
                             <th>@Html.DisplayNameFor(x => x.Teams[0].TeamPlayers)</th>
+                            <th>
+                                Akce
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -80,13 +83,47 @@
                                     <td>
                                         @CollectionHelper.GetTeamPlayersAsString(team.TeamPlayers)
                                     </td>
+                                    <td>
+                                        @if (Model.Status == Status.Scheduled)
+                                        {
+                                            @if (User.IsInRole(nameof(AdminRole.Admin)))
+                                            {
+                                                <a class="btn btn-sm btn-warning my-2" asp-controller="Team" asp-action="Update" asp-route-id="@team.Id">
+                                                    Upravit
+                                                </a>
+
+                                                <form asp-controller="Team"
+                                                      asp-action="Delete"
+                                                      asp-route-tournamentId="@Model.Id"
+                                                      asp-route-id="@team.Id"
+                                                      method="post"
+                                                      class="d-inline"
+                                                      onsubmit="return confirm('Opravdu chcete tým: @team.Name smazat?');">
+
+                                                    @Html.AntiForgeryToken()
+
+                                                    <button type="submit" class="btn btn-sm btn-danger">
+                                                        Smazat
+                                                    </button>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-danger fw-bold">Nemáte oprávnění</span>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="fw-bold">Akce již nejsou povoleny</span>
+                                        }
+                                    </td>
                                 </tr>
                             }
                         }
                         else
                         {
                             <tr>
-                                <td colspan="3" class="text-center py-4">
+                                <td colspan="4" class="text-center py-4">
                                     <div class="alert alert-secondary mb-0">
                                         Zatím nejsou žádné týmy.
                                     </div>

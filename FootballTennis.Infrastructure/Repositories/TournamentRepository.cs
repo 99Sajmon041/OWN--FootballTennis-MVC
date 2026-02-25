@@ -35,7 +35,10 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
 
     public async Task<Tournament?> GetTournamentByIdAsync(int tournamentId, CancellationToken ct)
     {
-        return await context.Tournaments.FirstOrDefaultAsync(x => x.Id == tournamentId, ct);
+        return await context
+            .Tournaments
+            .Include(x => x.Teams)
+            .FirstOrDefaultAsync(x => x.Id == tournamentId, ct);
     }
 
     public void DeleteTournament(Tournament tournament)
@@ -57,5 +60,10 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
                     .ThenInclude(x => x.TeamPlayers)
                         .ThenInclude(x => x.Player)
             .FirstOrDefaultAsync(x => x.Id == tournamentId, ct);
+    }
+
+    public async Task<bool> IsTournamentStatusScheduled(int tournamentId, CancellationToken ct)
+    {
+        return await context.Tournaments.AnyAsync(x => x.Id == tournamentId && x.Status == Status.Scheduled, ct);
     }
 }
