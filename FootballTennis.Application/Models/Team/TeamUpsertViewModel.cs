@@ -3,8 +3,9 @@
 
 namespace FootballTennis.Application.Models.Team;
 
-public sealed class CreateTeamViewModel
+public sealed class TeamUpsertViewModel
 {
+    public int? Id { get; set; }
     public int TournamentId { get; set; }
 
     [Required(ErrorMessage = "Název týmu je povinný.")]

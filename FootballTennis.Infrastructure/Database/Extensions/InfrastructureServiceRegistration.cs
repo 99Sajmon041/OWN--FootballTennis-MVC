@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FootballTennis.Infrastructure.Extensions;
+namespace FootballTennis.Infrastructure.Database.Extensions;
 
 public static class InfrastructureServiceRegistration
 {

@@ -8,6 +8,7 @@ public sealed class TeamMappingProfile : Profile
 {
     public TeamMappingProfile()
     {
-        CreateMap<CreateTeamViewModel, Team>();
+        CreateMap<TeamUpsertViewModel, Team>()
+            .ForMember(x => x.Id, opt => opt.Ignore());
     }
 }

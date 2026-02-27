@@ -22,4 +22,11 @@ public sealed class TeamRepository(FootballTennisDbContext context) : ITeamRepos
         return await context.Teams
             .FirstOrDefaultAsync(x => x.Id == id, ct);
     }
+
+    public async Task<Team?> GetTeamByIdWithDetailsAsync(int tournamentId, int id, CancellationToken ct)
+    {
+        return await context.Teams
+            .Include(x => x.TeamPlayers)
+            .FirstOrDefaultAsync(x => x.TournamentId == tournamentId && x.Id == id, ct);
+    }
 }

@@ -1,4 +1,5 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+﻿
+document.addEventListener("DOMContentLoaded", function () {
     const alerts = document.querySelectorAll(".alert-dismissible");
 
     if (alerts.length === 0) return;

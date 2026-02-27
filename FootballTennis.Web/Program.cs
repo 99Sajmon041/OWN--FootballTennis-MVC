@@ -1,6 +1,6 @@
 using FootballTennis.Application.Extensions;
 using FootballTennis.Infrastructure.Database;
-using FootballTennis.Infrastructure.Extensions;
+using FootballTennis.Infrastructure.Database.Extensions;
 using FootballTennis.Infrastructure.Identity;
 using FootballTennis.Infrastructure.SeedOptions;
 using FootballTennis.Web.MiddleWare;

@@ -1,6 +1,6 @@
 ﻿@model TeamUpsertViewModel
 
-<form asp-action="Create" asp-controller="Team" asp-route-tournamentId="@Model.TournamentId" method="post" data-player-select-form>
+<form asp-controller="Team" asp-action="Update" asp-route-id="@Model.Id" asp-route-tournamentId="@Model.TournamentId" method="post" data-player-select-form>
     @Html.AntiForgeryToken()
 
     <div class="row justify-content-center">
@@ -8,6 +8,7 @@
 
             <input type="hidden" asp-for="TournamentId" />
             <input type="hidden" asp-for="TeamPlayersCount" />
+            <input type="hidden" asp-for="Id" />
 
             <div class="mb-3">
                 <label asp-for="Name" class="form-label"></label>
@@ -21,11 +22,13 @@
                     <label class="form-label">Hráč @(i + 1)</label>
                     <select name="SelectedPlayersId" class="form-select player-select" required>
                         <option value="">-- Vyber hráče --</option>
+
                         @foreach (var player in Model.Players)
                         {
                             <option value="@player.Id"
                                     data-assigned="@(player.IsAlreadyAssigned ? "1" : "0")"
-                                    disabled="@(player.IsAlreadyAssigned ? "disabled" : null)">
+                                    disabled="@(player.IsAlreadyAssigned ? "disabled" : null)"
+                                    selected="@(Model.SelectedPlayersId[i] == player.Id ? "selected" : null)">
                                 @player.FullName
                             </option>
                         }
@@ -39,10 +42,10 @@
                 </a>
 
                 <button class="btn btn-primary" type="submit">
-                    Vytvořit
+                    Upravit
                 </button>
 
             </div>
         </div>
-     </div>
+    </div>
 </form> 

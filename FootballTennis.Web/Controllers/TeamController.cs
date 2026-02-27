@@ -14,7 +14,7 @@ namespace FootballTennis.Web.Controllers
         [Authorize(Roles = nameof(AdminRole.Admin))]
         public async Task<IActionResult> Create(int tournamentId, int teamPlayersCount, CancellationToken ct)
         {
-            return View(new CreateTeamViewModel
+            return View(new TeamUpsertViewModel
             {
                 TournamentId = tournamentId,
                 TeamPlayersCount = teamPlayersCount,
@@ -25,11 +25,12 @@ namespace FootballTennis.Web.Controllers
         [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = nameof(AdminRole.Admin))]
-        public async Task<IActionResult> Create(int tournamentId, CreateTeamViewModel model, CancellationToken ct)
+        public async Task<IActionResult> Create(int tournamentId, TeamUpsertViewModel model, CancellationToken ct)
         {
             if (!ModelState.IsValid)
             {
                 model.Players = await teamService.GetPlayersForTeamCreateAsync(model.TournamentId, ct);
+                TempData["Error"] = "Formulář obsahuje chyby.";
                 return View(model);
             }
 
@@ -63,6 +64,54 @@ namespace FootballTennis.Web.Controllers
             {
                 TempData["Error"] = ex.Message;
                 return RedirectToAction("Detail", "Tournament", new { id = tournamentId });
+            }
+        }
+
+
+        [HttpGet("{id:int}/Update")]
+        [Authorize(Roles = nameof(AdminRole.Admin))]
+        public async Task<IActionResult> Update(int tournamentId, int id, CancellationToken ct)
+        {
+            try
+            {
+                var model = await teamService.GetTeamForUpdateAsync(tournamentId, id, ct);
+                return View(model);
+            }
+            catch(DomainException ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction("Detail", "Tournament", new { id = tournamentId });
+            }
+        }
+
+
+        [HttpPost("{id:int}/Update")]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = nameof(AdminRole.Admin))]
+        public async Task<IActionResult> Update(int tournamentId, int id, TeamUpsertViewModel model, CancellationToken ct)
+        {
+            if (!ModelState.IsValid)
+            {
+                model = await teamService.GetTeamForUpdateAsync(tournamentId, id, ct);
+                TempData["Error"] = "Formulář obsahuje chyby.";
+                return View(model);
+            }
+
+            try
+            {
+                await teamService.UpdateTeamAsync(tournamentId, id, model, ct);
+                TempData["Success"] = "Tým byl upraven.";
+                return RedirectToAction("Detail", "Tournament", new { id = tournamentId });
+            }
+            catch (Exception ex) when (ex is ConflictException or DomainException)
+            {
+                TempData["Error"] = ex.Message;
+
+                var vm = await teamService.GetTeamForUpdateAsync(tournamentId, id, ct);
+                vm.Name = model.Name;
+                vm.SelectedPlayersId = model.SelectedPlayersId;
+
+                return View(vm);
             }
         }
     }

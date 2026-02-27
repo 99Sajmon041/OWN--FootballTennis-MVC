@@ -88,7 +88,11 @@
                                         {
                                             @if (User.IsInRole(nameof(AdminRole.Admin)))
                                             {
-                                                <a class="btn btn-sm btn-warning my-2" asp-controller="Team" asp-action="Update" asp-route-id="@team.Id">
+                                                <a class="btn btn-sm btn-warning my-2"
+                                                    asp-controller="Team" 
+                                                    asp-action="Update" 
+                                                    asp-route-tournamentId="@Model.Id"
+                                                    asp-route-id="@team.Id">
                                                     Upravit
                                                 </a>
 

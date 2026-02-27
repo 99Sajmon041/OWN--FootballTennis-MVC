@@ -3,7 +3,6 @@ using FootballTennis.Application.Common.Exceptions;
 using FootballTennis.Application.Models.Team;
 using FootballTennis.Application.Services.Interfaces;
 using FootballTennis.Domain.Entities;
-using FootballTennis.Domain.Enums;
 using FootballTennis.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 
@@ -34,7 +33,7 @@ public sealed class TeamService(
         return playersVm;
     }
 
-    public async Task AddTeamAsync(CreateTeamViewModel model, CancellationToken ct)
+    public async Task AddTeamAsync(TeamUpsertViewModel model, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
 
@@ -107,4 +106,114 @@ public sealed class TeamService(
 
         logger.LogInformation("Team with ID: {TeamId} was deleted from tournament with ID: {TournamentId}.", id, tournamentId);
     }
-}
+
+    public async Task<TeamUpsertViewModel> GetTeamForUpdateAsync(int tournamentId, int id, CancellationToken ct)
+    {
+        var team = await unitOfWork.TeamRepository.GetTeamByIdWithDetailsAsync(tournamentId, id, ct);
+        if (team is null)
+        {
+            logger.LogInformation("Team in tournament does not exists. Team ID: {TeamId}, tournament ID: {TournamentId}.", id, tournamentId);
+            throw new NotFoundException("Tým neexistuje.");
+        }
+
+        var istournamentStatusScheduled = await unitOfWork.TournamentRepository.IsTournamentStatusScheduled(tournamentId, ct);
+        if (!istournamentStatusScheduled)
+        {
+            logger.LogInformation("Admin tries to update Team, bud tournament has not set status to scheduled. Tournament ID: {TournamentId}.", tournamentId);
+            throw new DomainException("Tým nejde upravit, turnaj není ve stavu, kdy je možný upravit.");
+        }
+
+        var updateModel = new TeamUpsertViewModel
+        {
+            Id = team.Id,
+            TournamentId = team.TournamentId,
+            Name = team.Name,
+            TeamPlayersCount = team.TeamPlayers.Count,
+            Players = await GetPlayersForTeamCreateAsync(tournamentId, ct),
+            SelectedPlayersId = team.TeamPlayers.Select(x => x.PlayerId).ToList()
+        };
+
+        foreach (var player in updateModel.Players)
+        {
+            if (updateModel.SelectedPlayersId.Contains(player.Id))
+            {
+                player.IsAlreadyAssigned = false;
+            }
+        }
+
+        logger.LogInformation("Admin retrieved team model for update. Tournament ID: {TournamentId}, Team ID: {TeamId}.", team.TournamentId, team.Id);
+
+        return updateModel;
+    }
+
+    public async Task UpdateTeamAsync(int tournamentId, int id, TeamUpsertViewModel model, CancellationToken ct)
+    {
+        ct.ThrowIfCancellationRequested();
+
+        if (model.TournamentId != tournamentId)
+        {
+            logger.LogWarning("UpdateTeam: TournamentId mismatch. Route TournamentId: {RouteTournamentId}, Model TournamentId: {ModelTournamentId}.", 
+                tournamentId,
+                model.TournamentId);
+
+            throw new DomainException("Neplatný požadavek.");
+        }
+
+        var team = await unitOfWork.TeamRepository.GetTeamByIdWithDetailsAsync(tournamentId, id, ct);
+        if (team is null)
+        {
+            logger.LogInformation("Team in tournament does not exist. TeamId: {TeamId}, TournamentId: {TournamentId}.", id, tournamentId);
+
+            throw new NotFoundException("Tým neexistuje.");
+        }
+
+        var isTournamentStatusScheduled = await unitOfWork.TournamentRepository.IsTournamentStatusScheduled(tournamentId, ct);
+        if (!isTournamentStatusScheduled)
+        {
+            logger.LogInformation("Admin tries to update team, but tournament is not scheduled. TournamentId: {TournamentId}.", tournamentId);
+
+            throw new DomainException("Tým nejde upravit, turnaj není ve stavu, kdy je možné upravovat.");
+        }
+
+        var playersIdDistinct = model.SelectedPlayersId
+            .Distinct()
+            .ToList();
+
+        if (playersIdDistinct.Count != model.TeamPlayersCount)
+        {
+            logger.LogWarning(
+                "Team players count does not match. TournamentId: {TournamentId}, Expected: {ExpectedCount}, ReceivedDistinct: {ReceivedCount}.",
+                tournamentId,
+                model.TeamPlayersCount,
+                playersIdDistinct.Count);
+
+            throw new ConflictException("Počet hráčů neodpovídá.");
+        }
+
+        var existsPlayersInOtherTeam = await unitOfWork.TeamPlayerRepository.AlreadyExistsPlayersInOtherTeamAsync(tournamentId, team.Id, playersIdDistinct, ct);
+
+        if (existsPlayersInOtherTeam)
+        {
+            logger.LogWarning("Players already exist in another team. TournamentId: {TournamentId}, TeamId: {TeamId}.", tournamentId, team.Id);
+
+            throw new ConflictException("Hráči v týmu již existují v jiném týmu.");
+        }
+
+        team.Name = model.Name.Trim();
+
+        team.TeamPlayers.Clear();
+
+        foreach (var playerId in playersIdDistinct)
+        {
+            team.TeamPlayers.Add(new TeamPlayer
+            {
+                TournamentId = tournamentId,
+                PlayerId = playerId
+            });
+        }
+
+        await unitOfWork.SaveChangesAsync(ct);
+
+        logger.LogInformation( "Team updated successfully. TournamentId: {TournamentId}, TeamId: {TeamId}.", tournamentId, team.Id);
+    }
+} 
