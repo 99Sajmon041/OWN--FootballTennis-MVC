@@ -46,3 +46,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateOptions();
 });
+
+
+(function () {
+    function initPlayersFilters() {
+        const form = document.getElementById("playersFilterForm");
+        if (!form) {
+            return;
+        }
+
+        const searchInput = document.getElementById("searchInput");
+        const clearBtn = document.getElementById("clearSearchBtn");
+        const sortSelect = document.getElementById("sortSelect");
+        const descCheck = document.getElementById("descCheck");
+        const pageSizeSelect = document.getElementById("pageSize");
+        
+        function submitForm() {
+            form.submit();
+        }
+
+        if (sortSelect) {
+            sortSelect.addEventListener("change", submitForm);
+        }
+
+        if (descCheck) {
+            descCheck.addEventListener("change", submitForm);
+        }
+
+        if (pageSizeSelect) {
+            pageSizeSelect.addEventListener("change", submitForm);
+        }
+
+        let timerId = null;
+        if (searchInput) {
+            searchInput.addEventListener("input", function () {
+                if (timerId) {
+                    clearTimeout(timerId);
+                }
+
+                timerId = setTimeout(submitForm, 700);
+            });
+        }
+
+        if (clearBtn && searchInput) {
+            clearBtn.addEventListener("click", function () {
+                searchInput.value = "";
+                submitForm();
+            });
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initPlayersFilters);
+    } else {
+        initPlayersFilters();
+    }
+})();

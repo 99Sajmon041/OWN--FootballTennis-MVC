@@ -1,4 +1,4 @@
-﻿using FootballTennis.Domain.Enums;
+﻿using FootballTennis.Shared.Enums;
 
 namespace FootballTennis.Web.Utilities;
 

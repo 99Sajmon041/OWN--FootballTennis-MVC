@@ -1,7 +1,10 @@
-﻿using FootballTennis.Application.Common.Exceptions;
+﻿using Azure.Core;
+using FootballTennis.Application.Common.Exceptions;
 using FootballTennis.Application.Models.Tournament;
 using FootballTennis.Application.Services.Interfaces;
-using FootballTennis.Domain.Enums;
+using FootballTennis.Shared.Enums;
+using FootballTennis.Shared.Pagination;
+using FootballTennis.Web.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +12,14 @@ namespace FootballTennis.Web.Controllers
 {
     public class TournamentController(ITournamentService tournamentService) : Controller
     {
-        public async Task<IActionResult> Index(CancellationToken ct)
+        public async Task<IActionResult> Index(PagedRequest request, CancellationToken ct)
         {
-            var model = await tournamentService.GetAllTournamentsAsync(ct);
+            var model = new TournamentsIndexViewModel
+            {
+                Result = await tournamentService.GetAllTournamentsAsync(request, ct),
+                SortOptions = OptionsBuilder.GetSortOptionsForTournaments()
+            };
+                        
             return View(model);
         }
 

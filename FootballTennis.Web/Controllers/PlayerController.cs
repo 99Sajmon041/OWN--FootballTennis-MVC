@@ -1,17 +1,24 @@
 ﻿using FootballTennis.Application.Common.Exceptions;
 using FootballTennis.Application.Models.Player;
 using FootballTennis.Application.Services.Interfaces;
-using FootballTennis.Domain.Enums;
+using FootballTennis.Shared.Enums;
+using FootballTennis.Shared.Pagination;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using FootballTennis.Web.Utilities;
 
 namespace FootballTennis.Web.Controllers
 {
     public class PlayerController(IPlayerService playerService) : Controller
     {
-        public async Task<IActionResult> Index(CancellationToken ct)
+        public async Task<IActionResult> Index(PagedRequest request, CancellationToken ct)
         {
-            var model = await playerService.GetPlayerStatsListAsync(ct);
+            var model = new PlayersIndexViewModel
+            {
+                Result = await playerService.GetPlayerStatsListAsync(request, ct),
+                SortOptions = OptionsBuilder.GetSortOptionsForPlayers()
+            };
+
             return View(model);
         }
 

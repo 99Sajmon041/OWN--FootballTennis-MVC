@@ -4,6 +4,7 @@ using FootballTennis.Application.Models.Player;
 using FootballTennis.Application.Services.Interfaces;
 using FootballTennis.Domain.Entities;
 using FootballTennis.Domain.Interfaces;
+using FootballTennis.Shared.Pagination;
 using Microsoft.Extensions.Logging;
 
 namespace FootballTennis.Application.Services.Implementations;
@@ -13,15 +14,27 @@ public sealed class PlayerService(
     IUnitOfWork unitOfWork,
     IMapper mapper) : IPlayerService
 {
-    public async Task<IReadOnlyList<PlayerStatsListItemViewModel>> GetPlayerStatsListAsync(CancellationToken ct)
+    public async Task<PagedResult<PlayerStatsListItemViewModel>> GetPlayerStatsListAsync(PagedRequest request, CancellationToken ct)
     {
-        var playersStats = await unitOfWork.PlayerRepository.GetPlayersModelsStatsAsync(ct);
+        var pageRequest = request.Normalize();
 
-        var playersStatsModel = mapper.Map<List<PlayerStatsListItemViewModel>>(playersStats);
+        var (totalPlayersCount, players) = await unitOfWork.PlayerRepository.GetPlayersModelsStatsAsync(pageRequest, ct);
 
-        logger.LogInformation("User retrieved a list of all players. Total count: {PlayersCount}", playersStats.Count);
+        var playersVm = mapper.Map<List<PlayerStatsListItemViewModel>>(players);
 
-        return playersStatsModel;
+        logger.LogInformation("User retrieved a list of all players. Total count: {PlayersCount}", totalPlayersCount);
+
+
+        return new PagedResult<PlayerStatsListItemViewModel>
+        {
+            Page = pageRequest.Page,
+            PageSize = pageRequest.PageSize,
+            Search = pageRequest.Search,
+            SortBy = pageRequest.SortBy,
+            Desc = pageRequest.Desc,
+            TotalCount = totalPlayersCount,
+            Items = playersVm
+        };
     }
 
     public async Task CreatePlayerAsync(UpsertPlayerViewModel createPlayerViewModel, CancellationToken ct)

@@ -1,10 +1,12 @@
 ﻿using FootballTennis.Domain.Entities;
+using FootballTennis.Shared.Pagination;
+using FootballTennis.Shared.ReadModels;
 
 namespace FootballTennis.Domain.Interfaces;
 
 public interface ITournamentRepository
 {
-    Task<IReadOnlyList<Tournament>> GetAllTournamentsAsync(CancellationToken ct);
+    Task<(int, IReadOnlyList<TournamentListItemReadModel>)> GetAllTournamentsAsync(PagedRequest request, CancellationToken ct);
     void AddTournament(Tournament tournament);
     void DeleteTournament(Tournament tournament);
     Task<bool> ExistsTournamentWithSameName(string tournamentName, CancellationToken ct);

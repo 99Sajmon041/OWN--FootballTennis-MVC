@@ -1,8 +1,8 @@
 ﻿using FootballTennis.Shared.Enums;
 
-namespace FootballTennis.Domain.Entities;
+namespace FootballTennis.Shared.ReadModels;
 
-public sealed class Tournament
+public sealed class TournamentListItemReadModel
 {
     public int Id { get; set; }
     public string Name { get; set; } = default!;
@@ -10,6 +10,7 @@ public sealed class Tournament
     public DateTime Date { get; set; }
     public Status Status { get; set; }
     public int TeamPlayersCount { get; set; }
-    public List<Team> Teams { get; set; } = [];
-    public List<Match> Matches { get; set; } = [];
+    public int TeamsCount { get; set; }
+    public int MatchesCount { get; set; }
+    public string? WinnerName { get; set; }
 }

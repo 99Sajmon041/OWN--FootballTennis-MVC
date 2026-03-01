@@ -9,7 +9,7 @@
 </div>
 
 <div class="row justify-content-center">
-    <div class="col-12 col-md-8 col-lg-6">
+    <div class="col-12 col-md-8 col-lg-8 col-xl-9">
 
         <div class="card shadow-sm mb-4">
             <div class="card-body">
@@ -51,6 +51,12 @@
                             Model.Status == Status.Scheduled ? "Turnaj není zahájen" : $"{Model.TeamsCount - 1}"
                         )
                     </dd>
+
+                    <dt class="col-sm-4">Odehrané zápasy</dt>
+                    <dd class="col-sm-8">
+                        @(Model.Status == Status.Scheduled ? "Turnaj není zahájen" : Model.Matches.Where(x => x.IsPlayed).Count().ToString() + " / " + Model.MatchesCount.ToString())
+                    </dd>
+
                 </dl>
 
             </div>

@@ -1,7 +1,7 @@
 ﻿using FootballTennis.Application.Common.Exceptions;
 using FootballTennis.Application.Models.Team;
 using FootballTennis.Application.Services.Interfaces;
-using FootballTennis.Domain.Enums;
+using FootballTennis.Shared.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

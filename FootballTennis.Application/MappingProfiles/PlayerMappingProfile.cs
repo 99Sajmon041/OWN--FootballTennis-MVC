@@ -10,7 +10,7 @@ public sealed class PlayerMappingProfile : Profile
 {
     public PlayerMappingProfile()
     {
-        CreateMap<PlayerStatsReadModel, PlayerStatsListItemViewModel>();
+        CreateMap<PlayerListItemReadModel, PlayerStatsListItemViewModel>();
 
         CreateMap<UpsertPlayerViewModel, Player>()
             .ForMember(x => x.Id, opt => opt.Ignore());

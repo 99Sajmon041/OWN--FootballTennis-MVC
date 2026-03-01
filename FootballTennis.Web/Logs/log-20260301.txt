@@ -1,0 +1,124 @@
+[2026-03-01 13:46:36 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:46:38 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:46:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:46:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:46:52 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:46:58 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:03 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:08 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:24 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:31 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:36 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 13:47:37 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:43 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 13:47:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:47 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:49 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:51 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:56 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 13:47:56 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:29 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:31 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:33 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:35 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:37 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:37 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:38 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:40 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:41 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:43 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:46 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:55 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:57 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:39:58 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:00 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:02 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:03 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:07 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:09 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 16:40:14 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:17 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 16:40:22 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 16:40:30 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 16:40:33 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:36 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 0
+[2026-03-01 16:40:40 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 16:40:46 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:40:54 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:53:49 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:53:54 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:53:56 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:53:57 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:53:58 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:00 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:01 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:03 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:05 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:08 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:09 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 16:54:11 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:48 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:49 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:52 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:53 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:53 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 17:59:57 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:01 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:02 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:04 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:06 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:07 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:10 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:12 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:13 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:15 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:17 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:19 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:21 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:00:24 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:03:34 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:08:44 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:08:47 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:08:54 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:08:57 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:02 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:09 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:15 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 18:09:19 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 0
+[2026-03-01 18:09:22 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 0
+[2026-03-01 18:09:26 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-01 18:09:29 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:36 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:44 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:47 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:48 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:49 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:09:58 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:10:06 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:10:09 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-01 18:10:09 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-01 18:10:12 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-01 18:10:29 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-01 18:10:33 INF] FootballTennis.Application.Services.Implementations.TeamService Admin fetched 20 players to drop-down.
+[2026-03-01 18:10:33 INF] FootballTennis.Application.Services.Implementations.TeamService Admin retrieved team model for update. Tournament ID: 7, Team ID: 9.
+[2026-03-01 18:10:41 INF] FootballTennis.Application.Services.Implementations.TeamService Team updated successfully. TournamentId: 7, TeamId: 9.
+[2026-03-01 18:10:45 INF] FootballTennis.Application.Services.Implementations.TeamService Admin fetched 20 players to drop-down.
+[2026-03-01 18:10:45 INF] FootballTennis.Application.Services.Implementations.TeamService Admin retrieved team model for update. Tournament ID: 7, Team ID: 8.
+[2026-03-01 18:11:00 INF] FootballTennis.Application.Services.Implementations.TeamService Admin fetched 20 players to drop-down.
+[2026-03-01 18:11:12 INF] FootballTennis.Application.Services.Implementations.TeamService Admin created team with name: Amrdolci.
+[2026-03-01 18:11:39 INF] FootballTennis.Application.Services.Implementations.TeamService Team with ID: 10 was deleted from tournament with ID: 7.
+[2026-03-01 18:11:47 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:11:50 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:11:55 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-01 18:12:58 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-03-01 18:13:00 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-01 18:13:02 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:13:07 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:13:09 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-01 18:13:11 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3

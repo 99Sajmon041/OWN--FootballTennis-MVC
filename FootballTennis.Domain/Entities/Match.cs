@@ -1,4 +1,4 @@
-﻿using FootballTennis.Domain.Enums;
+﻿using FootballTennis.Shared.Enums;
 namespace FootballTennis.Domain.Entities;
 
 public sealed class Match

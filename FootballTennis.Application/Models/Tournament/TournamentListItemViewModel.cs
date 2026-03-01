@@ -1,4 +1,4 @@
-﻿using FootballTennis.Domain.Enums;
+﻿using FootballTennis.Shared.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace FootballTennis.Application.Models.Tournament;

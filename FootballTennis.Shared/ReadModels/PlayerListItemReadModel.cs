@@ -1,6 +1,6 @@
 ﻿namespace FootballTennis.Shared.ReadModels
 {
-    public sealed class PlayerStatsReadModel
+    public sealed class PlayerListItemReadModel
     {
         public int PlayerId { get; set; }
         public string FullName { get; set; } = default!;

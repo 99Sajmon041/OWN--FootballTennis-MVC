@@ -4,6 +4,8 @@ using FootballTennis.Application.Models.Tournament;
 using FootballTennis.Application.Services.Interfaces;
 using FootballTennis.Domain.Entities;
 using FootballTennis.Domain.Interfaces;
+using FootballTennis.Shared.Enums;
+using FootballTennis.Shared.Pagination;
 using Microsoft.Extensions.Logging;
 
 namespace FootballTennis.Application.Services.Implementations;
@@ -14,17 +16,27 @@ public sealed class TournamentService(
     IUnitOfWork unitOfWork) : ITournamentService
 {
 
-    public async Task<IReadOnlyList<TournamentListItemViewModel>> GetAllTournamentsAsync(CancellationToken ct)
+    public async Task<PagedResult<TournamentListItemViewModel>> GetAllTournamentsAsync(PagedRequest request, CancellationToken ct)
     {
-        var tournaments = await unitOfWork.TournamentRepository.GetAllTournamentsAsync(ct);
+        var pageRequest = request.Normalize();
 
-        var tournamentsModels = mapper.Map<List<TournamentListItemViewModel>>(tournaments);
+        var (totalTournamentsCount, tournaments) = await unitOfWork.TournamentRepository.GetAllTournamentsAsync(pageRequest, ct);
 
-        logger.LogInformation("User retrieved a list of all tournaments. Total count: {TournamentsCount}", tournaments.Count);
+        var tournamentsVm = mapper.Map<List<TournamentListItemViewModel>>(tournaments);
 
-        return tournamentsModels;
-    }
+        logger.LogInformation("User retrieved a list of all tournaments. Total count: {TournamentsCount}", totalTournamentsCount);
 
+        return new PagedResult<TournamentListItemViewModel>
+        {
+            Page = pageRequest.Page,
+            PageSize = pageRequest.PageSize,
+            Search = pageRequest.Search,
+            SortBy = pageRequest.SortBy,
+            Desc = pageRequest.Desc,
+            TotalCount = totalTournamentsCount,
+            Items = tournamentsVm
+        };
+    }   
 
     public async Task CreateTournamentAsync(TournamentUpsertViewModel model, CancellationToken ct)
     {
@@ -38,7 +50,7 @@ public sealed class TournamentService(
         }
 
         var tournament = mapper.Map<Tournament>(model);
-        tournament.Status = Domain.Enums.Status.Scheduled;
+        tournament.Status = Status.Scheduled;
 
         unitOfWork.TournamentRepository.AddTournament(tournament);
         await unitOfWork.SaveChangesAsync(ct);

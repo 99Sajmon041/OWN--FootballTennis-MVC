@@ -1,4 +1,4 @@
-﻿namespace FootballTennis.Domain.Enums;
+﻿namespace FootballTennis.Shared.Enums;
 
 public enum Status
 {

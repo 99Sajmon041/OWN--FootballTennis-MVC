@@ -1,7 +1,8 @@
 ﻿using FootballTennis.Domain.Entities;
-using FootballTennis.Domain.Enums;
+using FootballTennis.Shared.Enums;
 using FootballTennis.Domain.Interfaces;
 using FootballTennis.Infrastructure.Database;
+using FootballTennis.Shared.Pagination;
 using FootballTennis.Shared.ReadModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,11 +10,11 @@ namespace FootballTennis.Infrastructure.Repositories;
 
 public sealed class PlayerRepository(FootballTennisDbContext context) : IPlayerRepository
 {
-    public async Task<IReadOnlyList<PlayerStatsReadModel>> GetPlayersModelsStatsAsync(CancellationToken ct)
+    public async Task<(int, IReadOnlyList<PlayerListItemReadModel>)> GetPlayersModelsStatsAsync(PagedRequest request, CancellationToken ct)
     {
-        return await context.Players
+        var players = context.Players
             .AsNoTracking()
-            .Select(x => new PlayerStatsReadModel
+            .Select(x => new PlayerListItemReadModel
             {
                 PlayerId = x.Id,
                 FullName = x.FullName,
@@ -21,9 +22,46 @@ public sealed class PlayerRepository(FootballTennisDbContext context) : IPlayerR
                 FirstCount = x.TeamPlayers.Count(x => x.Tournament.Status == Status.Finished && x.Team.Position == 1),
                 SecondCount = x.TeamPlayers.Count(x => x.Tournament.Status == Status.Finished && x.Team.Position == 2),
                 ThirdCount = x.TeamPlayers.Count(x => x.Tournament.Status == Status.Finished && x.Team.Position == 3)
-            })
-            .OrderByDescending(x => x.FirstCount)
+            });
+
+        if (!string.IsNullOrWhiteSpace(request.Search))
+            players = players.Where(x => x.FullName.Contains(request.Search));
+
+        var totalPlayersCount = await players.CountAsync(ct);
+
+        players = request.SortBy switch
+        {
+            "FullName" => request.Desc
+                ? players.OrderByDescending(x => x.FullName).ThenByDescending(x => x.PlayerId)
+                : players.OrderBy(x => x.FullName).ThenBy(x => x.PlayerId),
+
+            "TournamentsCount" => request.Desc
+                ? players.OrderByDescending(x => x.TournamentsCount).ThenByDescending(x => x.PlayerId)
+                : players.OrderBy(x => x.TournamentsCount).ThenBy(x => x.PlayerId),
+
+            "FirstCount" => request.Desc
+                ? players.OrderByDescending(x => x.FirstCount).ThenByDescending(x => x.PlayerId)
+                : players.OrderBy(x => x.FirstCount).ThenBy(x => x.PlayerId),
+
+            "SecondCount" => request.Desc
+                ? players.OrderByDescending(x => x.SecondCount).ThenByDescending(x => x.PlayerId)
+                : players.OrderBy(x => x.SecondCount).ThenBy(x => x.PlayerId),
+
+            "ThirdCount" => request.Desc
+                ? players.OrderByDescending(x => x.ThirdCount).ThenByDescending(x => x.PlayerId)
+                : players.OrderBy(x => x.ThirdCount).ThenBy(x => x.PlayerId),
+
+            _ => request.Desc
+                ? players.OrderByDescending(x => x.PlayerId)
+                : players.OrderBy(x => x.PlayerId)
+        };
+
+        var allPlayers = await players
+            .Skip((request.Page - 1) * request.PageSize)
+            .Take(request.PageSize)
             .ToListAsync(ct);
+
+        return (totalPlayersCount, allPlayers);
     }
 
     public async Task AddPlayerAsync(Player player, CancellationToken ct)

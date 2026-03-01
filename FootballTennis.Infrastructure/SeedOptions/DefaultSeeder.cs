@@ -1,4 +1,4 @@
-﻿using FootballTennis.Domain.Enums;
+﻿using FootballTennis.Shared.Enums;
 using FootballTennis.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;

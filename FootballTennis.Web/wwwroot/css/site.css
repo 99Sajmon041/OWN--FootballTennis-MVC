@@ -73,3 +73,10 @@ body {
         box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
     }
 }
+
+#playersFilterForm .form-control:focus,
+#playersFilterForm .form-select:focus,
+#playersFilterForm .form-check-input:focus {
+    box-shadow: none;
+    outline: none;
+}
