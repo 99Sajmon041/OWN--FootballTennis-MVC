@@ -1,5 +1,4 @@
-﻿using Azure.Core;
-using FootballTennis.Application.Common.Exceptions;
+﻿using FootballTennis.Application.Common.Exceptions;
 using FootballTennis.Application.Models.Tournament;
 using FootballTennis.Application.Services.Interfaces;
 using FootballTennis.Shared.Enums;
@@ -104,6 +103,25 @@ namespace FootballTennis.Web.Controllers
         {
             var model = await tournamentService.GetTournamentWithDetailsAsync(id, ct);
             return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = nameof(AdminRole.Admin))]
+        public async Task<IActionResult> CreateMatches(int id, CancellationToken ct)
+        {
+            try
+            {
+                await tournamentService.GenerateMatchesForTournamentAsync(id, ct);
+
+                TempData["Success"] = "Zápasy úspěšně vytvořeny a turnaj je zahájen.";
+                return RedirectToAction(nameof(Detail), new { id });
+            }
+            catch (ConflictException ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction(nameof(Detail), new { id });
+            }
         }
     }
 }

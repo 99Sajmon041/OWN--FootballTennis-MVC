@@ -4,9 +4,19 @@
     ViewData["Title"] = "Správa a detail turnaje";
 }
 
-<div class="text-center mb-5">
-    <h1 class="display-4">Detail a správa turnaje</h1>
-</div>
+@if (User.IsInRole(nameof(AdminRole.Admin)))
+{
+    <div class="text-center mb-5">
+        <h1 class="display-4">Detail a správa turnaje</h1>
+    </div>
+}
+else
+{
+    <div class="text-center mb-5">
+        <h1 class="display-4">Detail turnaje</h1>
+    </div>
+}
+
 
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-8 col-xl-9">
@@ -119,12 +129,12 @@
                                             }
                                             else
                                             {
-                                                <span class="text-danger fw-bold">Nemáte oprávnění</span>
+                                                <span class="text-danger fw-bold mx-1">Nemáte oprávnění</span>
                                             }
                                         }
                                         else
                                         {
-                                            <span class="fw-bold">Akce již nejsou povoleny</span>
+                                            <span class="fw-bold mx-1">Akce již nejsou povoleny</span>
                                         }
                                     </td>
                                 </tr>
@@ -162,11 +172,11 @@
                 <table class="table @(Model.MatchesCount > 0 ? "table-striped" : "table-borderless") mb-0">
                     <thead>
                         <tr>
-                            <th>@Html.DisplayNameFor(x => x.Matches[0].TeamOneName)</th>
-                            <th>@Html.DisplayNameFor(x => x.Matches[0].TeamTwoName)</th>
-                            <th>@Html.DisplayNameFor(x => x.Matches[0].IsPlayed)</th>
-                            <th>@Html.DisplayNameFor(x => x.Matches[0].ScoreText)</th>
-                            <th>@Html.DisplayNameFor(x => x.Matches[0].Order)</th>
+                            <th>Jméno týmu 1</th>
+                            <th>Jméno týmu 2</th>
+                            <th>Odehráno</th>
+                            <th>Skóre</th>
+                            <th>Pořadí zápasu</th>
                             <th>Akce</th>
                         </tr>
                     </thead>
@@ -229,6 +239,18 @@
             </div>
         </div>
 
+        @if (Model.Status == Status.Scheduled && User.IsInRole(nameof(AdminRole.Admin)))
+        {
+            <p class="text-muted small text-center mb-3 mt-1">
+                Turnaj ještě není zahájen.
+                @if (Model.TeamsCount < 3)
+                {
+                    <span>Nejdřív vytvořte týmy (3 a více).</span>
+                }
+                Jakmile budou týmy připravené, můžete vygenerovat zápasy, turnaj se tak automaticky zahájí.
+            </p>
+        }
+
         @if (Model.Status == Status.Scheduled && User.IsInRole(nameof(AdminRole.Admin)) && Model.TeamsCount >= 3)
         {
             <div class="d-flex justify-content-end mb-3">
@@ -238,15 +260,7 @@
             </div>
         }
 
-        @if (Model.Status == Status.Scheduled)
-        {
-            <p class="text-muted small text-center mt-2 mb-0">
-                Turnaj ještě není zahájen. Nejdřív vytvořte týmy (minimálně 3).
-                Jakmile budou týmy připravené, můžete vygenerovat zápasy – tím se turnaj automaticky zahájí.
-            </p>
-        }
-
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between mt-2">
             <a class="btn btn-outline-primary" asp-action="Index" asp-controller="Tournament">
                 Zpět
             </a>
@@ -258,6 +272,5 @@
                 </a>
             }
         </div>
-
     </div>
 </div>

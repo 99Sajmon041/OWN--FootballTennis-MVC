@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 (function () {
-    function initPlayersFilters() {
-        const form = document.getElementById("playersFilterForm");
+    function initFilters() {
+        const form = document.getElementById("FilterForm");
         if (!form) {
             return;
         }
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initPlayersFilters);
+        document.addEventListener("DOMContentLoaded", initFilters);
     } else {
-        initPlayersFilters();
+        initFilters();
     }
 })();

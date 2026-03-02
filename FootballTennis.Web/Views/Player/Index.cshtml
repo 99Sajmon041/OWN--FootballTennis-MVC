@@ -8,7 +8,7 @@
     <h1 class="display-4">Seznam hráčů</h1>
 </div>
 
-<form method="get" class="mb-3" id="playersFilterForm">
+<form method="get" class="mb-3" id="FilterForm">
     <input type="hidden" name="Page" value="1" />
 
     <div class="card shadow-sm">
@@ -102,12 +102,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th>@Html.DisplayNameFor(m => m.Result.Items[0].PlayerId)</th>
-                <th>@Html.DisplayNameFor(m => m.Result.Items[0].FullName)</th>
-                <th>@Html.DisplayNameFor(m => m.Result.Items[0].TournamentsCount)</th>
-                <th>@Html.DisplayNameFor(m => m.Result.Items[0].FirstCount)</th>
-                <th>@Html.DisplayNameFor(m => m.Result.Items[0].SecondCount)</th>
-                <th>@Html.DisplayNameFor(m => m.Result.Items[0].ThirdCount)</th>
+                <th>ID</th>
+                <th>Jméno</th>
+                <th>Počet turnajů</th>
+                <th>Počet 1. míst</th>
+                <th>Počet 2. míst</th>
+                <th>Počet 3. míst</th>
                 <th>Akce</th>
             </tr>
         </thead>
@@ -228,7 +228,6 @@
             </nav>
         </div>
     }
-
 </div>
 
 

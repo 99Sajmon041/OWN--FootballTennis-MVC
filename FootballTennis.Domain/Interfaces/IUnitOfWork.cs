@@ -6,5 +6,6 @@ public interface IUnitOfWork
     IPlayerRepository PlayerRepository { get; }
     ITeamRepository TeamRepository { get; }
     ITeamPlayerRepository TeamPlayerRepository { get; }
+    IMatchRepository MatchRepository { get; }
     Task<int> SaveChangesAsync(CancellationToken ct);
 }

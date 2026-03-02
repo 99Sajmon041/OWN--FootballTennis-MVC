@@ -161,4 +161,95 @@ public sealed class TournamentService(
 
         return model;
     }
+
+    public async Task GenerateMatchesForTournamentAsync(int tournamentId, CancellationToken ct)
+    {
+        var tournament = await unitOfWork.TournamentRepository.GetTournamentByIdAsync(tournamentId, ct);
+        if (tournament is null)
+        {
+            logger.LogWarning("Tournament not found. Tournament ID: {TournamentId}.", tournamentId);
+            throw new NotFoundException("Turnaj neexistuje.");
+        }
+
+        if (tournament.Status != Status.Scheduled)
+        {
+            logger.LogWarning("Cannot generate matches because tournament is not in Scheduled status. Tournament ID: {TournamentId}, Status: {Status}.",
+                tournamentId,
+                tournament.Status);
+
+            throw new ConflictException("Zápasy lze vygenerovat pouze u turnaje, který není zahájen.");
+        }
+
+        if (tournament.Teams.Count < 3)
+        {
+            logger.LogWarning("Cannot generate matches because tournament has insufficient number of teams. Tournament ID: {TournamentId}, TeamsCount: {TeamsCount}.",
+                tournamentId,
+                tournament.Teams.Count);
+
+            throw new ConflictException("Pro zahájení turnaje musí být v turnaji alespoň 3 týmy.");
+        }
+
+        var existsMatches = await unitOfWork.MatchRepository.ExistsAnyForTournamentAsync(tournamentId, ct);
+        if (existsMatches)
+        {
+            logger.LogWarning("Cannot generate matches because matches already exist for tournament. Tournament ID: {TournamentId}.", tournamentId);
+            throw new ConflictException("Zápasy už byly vygenerovány.");
+        }
+
+        var teams = tournament.Teams
+            .OrderBy(x => x.Id)
+            .Cast<Team?>()
+            .ToList();
+
+        if (teams.Count % 2 != 0)
+        {
+            teams.Add(null);
+        }
+
+        var teamsCount = teams.Count;
+        var rounds = teamsCount - 1;
+        var matchesPerRound = teamsCount / 2;
+        var order = 1;
+
+        for (int round = 0; round < rounds; round++)
+        {
+            for (int m = 0; m < matchesPerRound; m++)
+            {
+                var teamOne = teams[m];
+                var teamTwo = teams[teamsCount - 1 - m];
+
+                if (teamOne is null || teamTwo is null)
+                {
+                    continue;
+                }
+
+                var match = new Match
+                {
+                    TournamentId = tournament.Id,
+                    TeamOneId = teamOne.Id,
+                    TeamTwoId = teamTwo.Id,
+                    Status = Status.Scheduled,
+                    Order = order,
+                    Sets =
+                    [
+                        new Set { SetNumber = 1 },
+                        new Set { SetNumber = 2 }
+                    ]
+                };
+
+                tournament.Matches.Add(match);
+                order++;
+            }
+
+            var last = teams[teamsCount - 1];
+            for (int index = teamsCount - 1; index >= 2; index--)
+            {
+                teams[index] = teams[index - 1];
+            }
+            teams[1] = last;
+        }
+
+        tournament.Status = Status.InProgress;
+        await unitOfWork.SaveChangesAsync(ct);
+    }
 }

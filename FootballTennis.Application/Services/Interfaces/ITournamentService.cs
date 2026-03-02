@@ -11,4 +11,5 @@ public interface ITournamentService
     Task<TournamentUpsertViewModel> GetTournamentForUpdateAsync(int tournamentId, CancellationToken ct);
     Task DeleteTournamentAsync(int tournamentId, CancellationToken ct);
     Task<TournamentDetailViewModel> GetTournamentWithDetailsAsync(int tournamentId, CancellationToken ct);
-}
+    Task GenerateMatchesForTournamentAsync(int tournamentId, CancellationToken ct);
+} 
