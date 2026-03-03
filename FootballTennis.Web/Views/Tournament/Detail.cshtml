@@ -80,9 +80,9 @@ else
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>@Html.DisplayNameFor(x => x.Teams[0].Id)</th>
-                            <th>@Html.DisplayNameFor(x => x.Teams[0].Name)</th>
-                            <th>@Html.DisplayNameFor(x => x.Teams[0].TeamPlayers)</th>
+                            <th>ID</th>
+                            <th>Název týmu</th>
+                            <th>Hráči</th>
                             <th>
                                 Akce
                             </th>
@@ -254,9 +254,13 @@ else
         @if (Model.Status == Status.Scheduled && User.IsInRole(nameof(AdminRole.Admin)) && Model.TeamsCount >= 3)
         {
             <div class="d-flex justify-content-end mb-3">
-                <a class="btn btn-success" asp-controller="Tournament" asp-action="CreateMatches" asp-route-id="@Model.Id">
-                    Vygenerovat zápasy (zahájit turnaj)
-                </a>
+                <form method="post" asp-controller="Tournament" asp-action="CreateMatches" asp-route-id="@Model.Id">
+                    @Html.AntiForgeryToken()
+
+                    <button class="btn btn-success" type="submit">
+                        Vygenerovat zápasy (zahájit turnaj)
+                    </button>
+                </form>
             </div>
         }
 

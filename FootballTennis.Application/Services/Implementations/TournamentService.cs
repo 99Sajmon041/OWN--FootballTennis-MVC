@@ -141,8 +141,10 @@ public sealed class TournamentService(
             {
                 if (set.ScoreTeam1 > set.ScoreTeam2)
                     winOne++;
-                else
+                else if (set.ScoreTeam2 > set.ScoreTeam1)
                     winTwo++;
+                else
+                    continue;
             }
 
             var vmMatch = model.Matches.First(x => x.Id == match.Id);
@@ -228,12 +230,22 @@ public sealed class TournamentService(
                     TournamentId = tournament.Id,
                     TeamOneId = teamOne.Id,
                     TeamTwoId = teamTwo.Id,
-                    Status = Status.Scheduled,
+                    Status = Status.InProgress,
                     Order = order,
                     Sets =
                     [
-                        new Set { SetNumber = 1 },
-                        new Set { SetNumber = 2 }
+                        new Set
+                        { 
+                            SetNumber = 1,
+                            ScoreTeam1 = 0,
+                            ScoreTeam2 = 0,
+                        },
+                        new Set
+                        { 
+                            SetNumber = 2,
+                            ScoreTeam1 = 0,
+                            ScoreTeam2 = 0,
+                        }
                     ]
                 };
 
