@@ -30,7 +30,6 @@ namespace FootballTennis.Web.Controllers
             if (!ModelState.IsValid)
             {
                 model.Players = await teamService.GetPlayersForTeamCreateAsync(model.TournamentId, ct);
-                TempData["Error"] = "Formulář obsahuje chyby.";
                 return View(model);
             }
 

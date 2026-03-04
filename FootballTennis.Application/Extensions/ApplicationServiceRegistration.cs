@@ -15,6 +15,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IPlayerService, PlayerService>();
         services.AddScoped<IAccountService, AccountService>();
         services.AddScoped<ITeamService, TeamService>();
+        services.AddScoped<IMatchService, MatchService>();
 
         return services;
     }

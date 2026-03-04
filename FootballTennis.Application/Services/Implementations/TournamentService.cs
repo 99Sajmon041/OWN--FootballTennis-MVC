@@ -245,6 +245,12 @@ public sealed class TournamentService(
                             SetNumber = 2,
                             ScoreTeam1 = 0,
                             ScoreTeam2 = 0,
+                        },
+                        new Set
+                        {
+                            SetNumber = 3,
+                            ScoreTeam1 = 0,
+                            ScoreTeam2 = 0,
                         }
                     ]
                 };

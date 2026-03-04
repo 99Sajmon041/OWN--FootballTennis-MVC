@@ -1,0 +1,144 @@
+﻿@model MatchUpdateViewModel
+
+@{
+    ViewData["Title"] = "Úprava zápasu";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-4">Úprava zápasu</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+
+                <form method="post"
+                      asp-controller="Match"
+                      asp-action="Update"
+                      asp-route-id="@Model.Id"
+                      asp-route-tournamentId="@Model.TournamentId">
+
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="TournamentId" />
+
+                    <div class="text-center mb-4">
+                        <div class="text-muted small">Zápas č. @Model.Order</div>
+
+                        <div class="row align-items-center mt-2">
+                            <div class="col-5 fw-bold fs-5 text-start text-truncate">
+                                @Model.TeamOneName
+                            </div>
+
+                            <div class="col-2 text-center">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-2">
+                                    VS
+                                </span>
+                            </div>
+
+                            <div class="col-5 fw-bold fs-5 text-end text-truncate">
+                                @Model.TeamTwoName
+                            </div>
+                        </div>
+
+                        <div class="text-muted small mt-2">
+                            Zadejte body v jednotlivých setech (0–25).
+                        </div>
+                    </div>
+
+                    <div class="text-center text-muted fw-semibold mb-2">
+                        SETY
+                    </div>
+
+                    @for (int i = 0; i < 2; i++)
+                    {
+                        <input type="hidden" asp-for="Sets[i].Id" />
+                        <input type="hidden" asp-for="Sets[i].MatchId" />
+                        <input type="hidden" asp-for="Sets[i].SetNumber" />
+
+                        <div class="border rounded-3 p-3 mb-2 bg-body-tertiary">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-5">
+                                    <input class="form-control text-center" asp-for="Sets[i].ScoreTeam1" inputmode="numeric" />
+                                    <span class="text-danger small" asp-validation-for="Sets[i].ScoreTeam1"></span>
+                                </div>
+
+                                <div class="col-2 text-center text-muted fw-bold">:</div>
+
+                                <div class="col-5">
+                                    <input class="form-control text-center" asp-for="Sets[i].ScoreTeam2" inputmode="numeric" />
+                                    <span class="text-danger small" asp-validation-for="Sets[i].ScoreTeam2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    @{
+                        var winOne = 0;
+                        var winTwo = 0;
+
+                        foreach (var set in Model.Sets.Take(2))
+                        {
+                            if (set.ScoreTeam1 is null || set.ScoreTeam2 is null)
+                                continue;
+
+                            if (set.ScoreTeam1 > set.ScoreTeam2) winOne++;
+                            else if (set.ScoreTeam2 > set.ScoreTeam1) winTwo++;
+                        }
+
+                        var showThirdSet = (winOne == 1 && winTwo == 1);
+                    }
+
+                    @if (showThirdSet)
+                    {
+                        <input type="hidden" asp-for="Sets[2].Id" />
+                        <input type="hidden" asp-for="Sets[2].MatchId" />
+                        <input type="hidden" asp-for="Sets[2].SetNumber" />
+
+                        <div class="border rounded-3 p-3 mb-2 bg-body-tertiary">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-5">
+                                    <input class="form-control text-center" asp-for="Sets[2].ScoreTeam1" inputmode="numeric" />
+                                    <span class="text-danger small" asp-validation-for="Sets[2].ScoreTeam1"></span>
+                                </div>
+
+                                <div class="col-2 text-center text-muted fw-bold">:</div>
+
+                                <div class="col-5">
+                                    <input class="form-control text-center" asp-for="Sets[2].ScoreTeam2" inputmode="numeric" />
+                                    <span class="text-danger small" asp-validation-for="Sets[2].ScoreTeam2"></span>
+                                </div>
+                            </div>
+
+                            <div class="text-muted small mt-2">
+                                Třetí set se hraje pouze při stavu 1:1 na sety.
+                            </div>
+                        </div>
+                    }
+
+                    <hr class="my-4" />
+
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-outline-primary"
+                           asp-controller="Tournament"
+                           asp-action="Detail"
+                           asp-route-id="@Model.TournamentId">
+                            Zpět
+                        </a>
+
+                        <button type="submit" class="btn btn-primary">
+                            Uložit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

@@ -11,6 +11,9 @@ namespace FootballTennis.Web.Controllers
     {
         public IActionResult Login()
         {
+            if (User.Identity?.IsAuthenticated == true)
+                return RedirectToAction("Index", "Home");
+
             return View();
         }
 
@@ -18,6 +21,9 @@ namespace FootballTennis.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, CancellationToken ct)
         {
+            if (User.Identity?.IsAuthenticated == true)
+                return RedirectToAction("Index", "Home");
+
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -57,11 +63,6 @@ namespace FootballTennis.Web.Controllers
             TempData["Success"] = "Uživatel úspěšně odhlášen.";
 
             return RedirectToAction("Index", "Home");
-        }
-
-        public IActionResult AccessDenied()
-        {
-            return View();
         }
     }
 }

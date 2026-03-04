@@ -207,7 +207,7 @@ else
                                         {
                                             @if (Model.Status == Status.InProgress)
                                             {
-                                                <a class="btn btn-sm btn-primary" asp-controller="" asp-action="" asp-route-id="@match.Id">
+                                                <a class="btn btn-sm btn-primary" asp-controller="Match" asp-action="Update" asp-route-tournamentId="@Model.Id" asp-route-id="@match.Id">
                                                     Upravit
                                                 </a>
                                             }
