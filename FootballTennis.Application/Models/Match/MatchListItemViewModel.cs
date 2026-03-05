@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FootballTennis.Shared.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace FootballTennis.Application.Models.Match;
 
@@ -14,7 +15,7 @@ public sealed class MatchListItemViewModel
     public string TeamTwoName { get; set; } = default!;
 
     [Display(Name = "Odehrán")]
-    public bool IsPlayed { get; set; }
+    public MatchStatus MatchStatus { get; set; }
 
     [Display(Name = "Skóre")]
     public string? ScoreText { get; set; }

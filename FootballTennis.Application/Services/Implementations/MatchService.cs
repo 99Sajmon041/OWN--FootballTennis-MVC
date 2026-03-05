@@ -41,35 +41,98 @@ public class MatchService(
             throw new NotFoundException("Zápas nebyl nalezen.");
         }
 
+        var orderedSets = model.Sets
+            .OrderBy(x => x.SetNumber)
+            .ToList();
+
         int teamOneWins = 0;
         int teamTwoWins = 0;
 
-        foreach (var set in model.Sets)
+        for (int i = 0; i < orderedSets.Count; i++)
         {
-            if (set.ScoreTeam1 is null || set.ScoreTeam2 is null)
-                continue;
+            var set = orderedSets[i];
 
-            if ((0 > set.ScoreTeam1 || set.ScoreTeam1 > 25) || (0 > set.ScoreTeam2 || set.ScoreTeam2 > 25))
+            bool bothNull = set.ScoreTeam1 is null && set.ScoreTeam2 is null;
+            bool oneNull = set.ScoreTeam1 is null || set.ScoreTeam2 is null;
+
+            if (!bothNull && set.ScoreTeam1!.Value == set.ScoreTeam2!.Value)
             {
-                logger.LogWarning("Invalid set score range (0-25). Match ID: {MatchId}.", model.Id);
+                throw new ConflictException("Nelze nastavit stejné skóre pro oba týmy.");
+            }
+
+            if (bothNull)
+            {
+                bool hasFilledAfter = orderedSets
+                    .Skip(i + 1)
+                    .Any(s => s.ScoreTeam1 is not null || s.ScoreTeam2 is not null);
+            
+                if (hasFilledAfter)
+                {
+                    logger.LogWarning("Admin tries to set sets out of order. Match ID: {MatchId}.", model.Id);
+                    throw new ConflictException("Nelze nastavovat sety na přeskáčku.");
+                }
+
+                for (int j = i + 1; j < orderedSets.Count; j++)
+                {
+                    orderedSets[j].ScoreTeam1 = null;
+                    orderedSets[j].ScoreTeam2 = null;
+                }
+
+                break;
+            }
+
+
+            if (oneNull)
+            {
+                logger.LogWarning("Set has only one score filled. Match ID: {MatchId}, SetNumber: {SetNumber}.", model.Id, set.SetNumber);
+                throw new ConflictException("Set musí mít vyplněné skóre pro oba týmy, nebo pro oba prázdné.");
+            }
+
+            if (set.ScoreTeam1 < 0 || set.ScoreTeam1 > 25 || set.ScoreTeam2 < 0 || set.ScoreTeam2 > 25)
+            {
+                logger.LogWarning("Invalid set score range (0-25). Match ID: {MatchId}, SetNumber: {SetNumber}.", model.Id, set.SetNumber);
                 throw new ConflictException("Skóre setu musí být v rozmezí 0–25.");
             }
 
-            if (set.ScoreTeam1 > set.ScoreTeam2)
+            int s1 = set.ScoreTeam1!.Value;
+            int s2 = set.ScoreTeam2!.Value;
+
+            bool isFinished = ((Math.Max(s1, s2) == 11) && (Math.Abs(s1 - s2) >= 2) || (Math.Max(s1, s2) > 11) && (Math.Abs(s1 - s2) == 2));
+
+            if (!isFinished)
+            {
+                logger.LogWarning("Invalid finished set score. Match ID: {MatchId}, SetNumber: {SetNumber}, Score: {S1}:{S2}.", model.Id, set.SetNumber, s1, s2);
+                throw new ConflictException($"Nezadali jste platný finální výsledek setu číslo: {set.SetNumber}.");
+            }
+
+            if (s1 > s2)
+            {
                 teamOneWins++;
-            else if (set.ScoreTeam1 < set.ScoreTeam2)
-                teamTwoWins++;
+            }
             else
-                continue;
+            {
+                teamTwoWins++;
+            }
+
+            if (teamOneWins == 2 || teamTwoWins == 2)
+            {
+                for (int j = i + 1; j < orderedSets.Count; j++)
+                {
+                    orderedSets[j].ScoreTeam1 = null;
+                    orderedSets[j].ScoreTeam2 = null;
+                }
+
+                break;
+            }
         }
 
-        if (teamOneWins > 2 || teamTwoWins > 2 || teamOneWins + teamTwoWins > 3)
+        if (teamOneWins > 2 || teamTwoWins > 2 || (teamOneWins + teamTwoWins) > 3)
         {
             logger.LogWarning("Match with ID: {MatchId} has no valid score - unable to save.", model.Id);
             throw new ConflictException("Zápas má neplatné skóre - nelze uložit.");
         }
 
-        var modelSetsById = model.Sets.ToDictionary(x => x.Id);
+        var modelSetsById = orderedSets.ToDictionary(x => x.Id);
 
         foreach (var setEntity in match.Sets)
         {
@@ -79,6 +142,7 @@ public class MatchService(
                 setEntity.ScoreTeam2 = setVm.ScoreTeam2;
             }
         }
+
 
         await unitOfWork.SaveChangesAsync(ct);
 

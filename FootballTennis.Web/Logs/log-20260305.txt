@@ -1,0 +1,623 @@
+[2026-03-05 14:05:20 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-03-05 14:05:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:05:33 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:05:35 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 14:05:58 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 14:06:04 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:06:08 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 2.
+[2026-03-05 14:06:36 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-05 14:06:40 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 4.
+[2026-03-05 14:06:57 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 4.
+[2026-03-05 14:07:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 14:07:13 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 14:07:21 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 14:07:32 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJQMRCV6RBU:00000099, Path: /Tournament/7/Matches/16/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method1007(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateHidden(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__23_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 94
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 14:09:55 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:09:57 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 14:09:58 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:10:13 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJQN1UFPF3V:00000019, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method511(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer.get_Model()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateHidden(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__27_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 94
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 14:10:17 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:10:20 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:11:02 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:11:03 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 14:11:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:11:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:11:26 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJQN2HMIF6S:0000002B, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method583(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer.get_Model()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateHidden(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 94
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 14:12:39 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:12:41 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 14:12:43 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 2.
+[2026-03-05 14:17:43 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 14:17:44 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 14:17:46 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:17:48 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:17:48 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:17:54 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:17:54 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:17:56 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:17:57 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:01 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:01 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:08 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:08 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:13 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:13 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:16 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:16 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:25 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:25 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:28 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:28 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:38 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:38 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:45 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:18:45 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:18:55 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:19:03 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:19:03 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:19:09 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:19:09 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:19:14 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:19:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:19:19 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:19:19 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:19:28 WRN] FootballTennis.Application.Services.Implementations.MatchService Match with ID: 1 has no valid score - unable to save.
+[2026-03-05 14:19:38 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:19:54 WRN] FootballTennis.Application.Services.Implementations.MatchService Match with ID: 1 has no valid score - unable to save.
+[2026-03-05 14:20:03 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 14:20:03 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:20:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:20:06 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 14:20:16 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 18:59:23 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 18:59:25 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 18:59:27 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 18:59:31 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 18:59:34 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 18:59:34 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 18:59:42 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 18:59:42 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 18:59:44 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 18:59:50 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 2, Score: 11:11.
+[2026-03-05 18:59:59 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 2, Score: 11:11.
+[2026-03-05 19:00:05 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 2, Score: 11:10.
+[2026-03-05 19:00:13 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:00:13 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:00:19 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:00:19 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:00:31 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:00:31 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:00:40 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:00:40 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:00:44 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:01:00 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:01:00 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:01:14 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:01:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:01:22 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:01:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:01:38 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 2, Score: 11:11.
+[2026-03-05 19:01:50 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:01:51 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:01:56 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 2, Score: 11:11.
+[2026-03-05 19:02:10 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 2, Score: 11:11.
+[2026-03-05 19:02:18 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:02:18 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:02:23 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 19:02:32 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 8, SetNumber: 1, Score: 11:11.
+[2026-03-05 19:02:43 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 8 was updated successfully.
+[2026-03-05 19:02:44 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 19:02:49 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 8, SetNumber: 1, Score: 0:5.
+[2026-03-05 19:02:55 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 8 was updated successfully.
+[2026-03-05 19:02:56 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 19:03:06 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 8 was updated successfully.
+[2026-03-05 19:03:07 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 19:04:20 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 8 was updated successfully.
+[2026-03-05 19:04:20 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 19:04:25 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 8 was updated successfully.
+[2026-03-05 19:04:25 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 8.
+[2026-03-05 19:04:33 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-05 19:04:36 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 9 was updated successfully.
+[2026-03-05 19:04:36 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-05 19:04:41 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 9 was updated successfully.
+[2026-03-05 19:04:41 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-05 19:04:51 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-05 19:04:56 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 9 was updated successfully.
+[2026-03-05 19:04:56 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-05 19:05:02 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 10.
+[2026-03-05 19:05:04 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 10 was updated successfully.
+[2026-03-05 19:05:04 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 10.
+[2026-03-05 19:05:08 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 10 was updated successfully.
+[2026-03-05 19:05:08 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 10.
+[2026-03-05 19:05:16 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 10 was updated successfully.
+[2026-03-05 19:05:16 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 10.
+[2026-03-05 19:05:25 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:05:30 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:05:35 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:05:38 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:05:43 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:05:43 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:05:50 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:05:50 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:23:15 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:23:19 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:23:21 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 19:23:36 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 11:16.
+[2026-03-05 19:23:50 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 11:16.
+[2026-03-05 19:24:20 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 11:16.
+[2026-03-05 19:24:35 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:24:39 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 19:25:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 19:25:25 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 11:10.
+[2026-03-05 19:25:35 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 19:26:13 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:26:14 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:26:16 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 11.
+[2026-03-05 19:27:11 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:27:12 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:27:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 11.
+[2026-03-05 19:27:18 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 11 was updated successfully.
+[2026-03-05 19:27:18 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 11.
+[2026-03-05 19:28:51 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 11, SetNumber: 2, Score: 11:16.
+[2026-03-05 19:28:57 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 11, SetNumber: 2, Score: 11:16.
+[2026-03-05 19:29:52 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:29:53 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:29:55 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-05 19:30:01 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-05 19:30:01 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-05 19:34:16 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:34:17 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:34:20 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:34:25 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:34:33 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 13, SetNumber: 1, Score: 11:14.
+[2026-03-05 19:34:34 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:34:42 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 13 was updated successfully.
+[2026-03-05 19:34:42 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:34:47 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:34:53 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 13, SetNumber: 2, Score: 16:17.
+[2026-03-05 19:34:54 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:34:56 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 13, SetNumber: 2, Score: 16:20.
+[2026-03-05 19:34:57 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:35:02 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 13 was updated successfully.
+[2026-03-05 19:35:02 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:35:08 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:35:12 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 13, SetNumber: 3, Score: 8:13.
+[2026-03-05 19:35:13 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:35:19 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 13 was updated successfully.
+[2026-03-05 19:35:19 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:35:27 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:35:30 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:35:34 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 10:14.
+[2026-03-05 19:35:34 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:35:40 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:35:47 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 11:10.
+[2026-03-05 19:35:48 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:35:56 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:35:56 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:02 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 5:12.
+[2026-03-05 19:36:02 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:14 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 5:13.
+[2026-03-05 19:36:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:27 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:36:27 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:32 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 1:12.
+[2026-03-05 19:36:32 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:47 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 14:7.
+[2026-03-05 19:36:48 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:36:53 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:36:53 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:37:02 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:37:02 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:37:07 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 19:37:07 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 19:53:44 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:53:46 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:53:49 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 13.
+[2026-03-05 19:55:05 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:55:07 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 19:55:09 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 3.
+[2026-03-05 19:55:24 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 3, SetNumber: 2, Score: 11:12.
+[2026-03-05 19:55:27 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJQT2QI2RGN:00000027, Path: /Tournament/1/Matches/3/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method545(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer.get_Model()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateHidden(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 19:55:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 19:55:36 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:55:44 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-05 19:55:44 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-05 19:55:58 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 3, Score: 10:14.
+[2026-03-05 19:56:15 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 3, Score: 1:14.
+[2026-03-05 20:22:06 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:22:08 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:22:10 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 14.
+[2026-03-05 20:22:56 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:22:58 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:23:00 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 14.
+[2026-03-05 20:23:31 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 14, SetNumber: 1, Score: 10:11.
+[2026-03-05 20:23:38 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 14 was updated successfully.
+[2026-03-05 20:23:38 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 14.
+[2026-03-05 20:24:11 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:24:13 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:24:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:24:21 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:24:54 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:25:02 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:25:04 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:25:10 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 15:11.
+[2026-03-05 20:25:26 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 15:11.
+[2026-03-05 20:26:46 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:26:48 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:26:50 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:26:54 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 17 was updated successfully.
+[2026-03-05 20:26:54 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:27:00 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 15:18.
+[2026-03-05 20:27:06 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 15:18.
+[2026-03-05 20:27:13 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 15:1.
+[2026-03-05 20:27:18 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 17 was updated successfully.
+[2026-03-05 20:27:18 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:27:21 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 11:14.
+[2026-03-05 20:27:27 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:27:31 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 11:14.
+[2026-03-05 20:27:42 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:27:47 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 1, Score: 15:19.
+[2026-03-05 20:28:57 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 1, Score: 15:19.
+[2026-03-05 20:29:03 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:29:10 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 2, Score: 11:15.
+[2026-03-05 20:29:14 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJQTK7IN94D:00000031, Path: /Tournament/7/Matches/17/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method853(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 20:29:17 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:29:19 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:29:24 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 2, Score: 11:16.
+[2026-03-05 20:29:27 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJQTK7IN94D:00000053, Path: /Tournament/7/Matches/17/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method901(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 20:29:27 ERR] Microsoft.EntityFrameworkCore.Database.Connection An error occurred using the connection to database 'FootballTennis' on server 'SIMON-PC'.
+[2026-03-05 20:29:27 ERR] Microsoft.EntityFrameworkCore.Database.Connection An error occurred using the connection to database 'FootballTennis' on server 'SIMON-PC'.
+[2026-03-05 20:29:29 ERR] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 500, TraceId: 0HNJQTK7IN94D:00000055, Path: /Tournament/Detail/7, Message: A task was canceled.
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FootballTennis.Infrastructure.Repositories.TournamentRepository.GetTournamentWithDetailsAsync(Int32 tournamentId, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Infrastructure\Repositories\TournamentRepository.cs:line 100
+   at FootballTennis.Application.Services.Implementations.TournamentService.GetTournamentWithDetailsAsync(Int32 tournamentId, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Application\Services\Implementations\TournamentService.cs:line 126
+   at FootballTennis.Web.Controllers.TournamentController.Detail(Int32 id, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Controllers\TournamentController.cs:line 104
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 20:29:29 ERR] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 500, TraceId: 0HNJQTK7IN94D:00000057, Path: /Tournament, Message: A task was canceled.
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FootballTennis.Infrastructure.Repositories.TournamentRepository.GetAllTournamentsAsync(PagedRequest request, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Infrastructure\Repositories\TournamentRepository.cs:line 33
+   at FootballTennis.Application.Services.Implementations.TournamentService.GetAllTournamentsAsync(PagedRequest request, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Application\Services\Implementations\TournamentService.cs:line 23
+   at FootballTennis.Web.Controllers.TournamentController.Index(PagedRequest request, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Controllers\TournamentController.cs:line 16
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-05 20:29:29 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:29:32 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:29:36 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:29:40 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 17 was updated successfully.
+[2026-03-05 20:29:40 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:29:45 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 16:19.
+[2026-03-05 20:29:46 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 16:19.
+[2026-03-05 20:30:49 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:30:51 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:30:53 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:30:57 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 16:20.
+[2026-03-05 20:30:58 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:31:00 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 17 was updated successfully.
+[2026-03-05 20:31:00 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:31:04 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 17, SetNumber: 1, Score: 16:20.
+[2026-03-05 20:31:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 17.
+[2026-03-05 20:31:23 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:31:28 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 1, Score: 11:15.
+[2026-03-05 20:31:28 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:31:35 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 18 was updated successfully.
+[2026-03-05 20:31:35 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:31:39 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 2, Score: 11:18.
+[2026-03-05 20:31:39 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:06 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:36:07 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 20:36:10 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:15 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 1, Score: 9:13.
+[2026-03-05 20:36:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:23 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 1, Score: 11:16.
+[2026-03-05 20:36:23 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:27 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:31 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 18 was updated successfully.
+[2026-03-05 20:36:31 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:39 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 2, Score: 1:16.
+[2026-03-05 20:36:40 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:46 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:36:57 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 18, SetNumber: 2, Score: 8:12.
+[2026-03-05 20:36:57 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:37:00 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 18 was updated successfully.
+[2026-03-05 20:37:00 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:37:02 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 18 was updated successfully.
+[2026-03-05 20:37:02 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:37:07 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:37:17 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 18 was updated successfully.
+[2026-03-05 20:37:17 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 20:37:19 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 20:37:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 18.
+[2026-03-05 21:11:37 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:11:39 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 21:11:51 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:12:37 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:12:39 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-05 21:12:47 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 21:12:57 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 21:12:57 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 21:13:04 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-05 21:13:04 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 21:13:10 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 21:15:06 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-05 21:15:26 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:15:29 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:15:38 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 3, Score: 11:12.
+[2026-03-05 21:15:38 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:15:47 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 21:15:47 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:15:51 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:16:05 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 16, SetNumber: 2, Score: 2:16.
+[2026-03-05 21:16:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:16:12 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 21:16:12 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:16:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:16:19 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:16:24 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 16 was updated successfully.
+[2026-03-05 21:16:24 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 16.
+[2026-03-05 21:16:34 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-05 21:16:40 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 1
+[2026-03-05 21:16:43 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-05 21:16:47 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:16:51 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:16:56 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:17:00 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:17:04 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:17:12 INF] FootballTennis.Application.Services.Implementations.TeamService Admin fetched 20 players to drop-down.
+[2026-03-05 21:17:27 INF] FootballTennis.Application.Services.Implementations.TeamService Admin created team with name: Rarfani z Koterovský.
+[2026-03-05 21:17:37 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-05 21:19:10 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3

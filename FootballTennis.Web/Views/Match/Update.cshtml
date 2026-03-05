@@ -14,16 +14,15 @@
         <div class="card shadow-sm">
             <div class="card-body p-4">
 
-                <form method="post"
-                      asp-controller="Match"
-                      asp-action="Update"
-                      asp-route-id="@Model.Id"
-                      asp-route-tournamentId="@Model.TournamentId">
+                <form method="post" asp-controller="Match" asp-action="Update" asp-route-id="@Model.Id" asp-route-tournamentId="@Model.TournamentId">
+                    <div asp-validation-summary="All" class="text-danger fw-bold"></div>
 
                     @Html.AntiForgeryToken()
 
                     <input type="hidden" asp-for="Id" />
                     <input type="hidden" asp-for="TournamentId" />
+                    <input type="hidden" asp-for="TeamOneName" />
+                    <input type="hidden" asp-for="TeamTwoName" />
 
                     <div class="text-center mb-4">
                         <div class="text-muted small">Zápas č. @Model.Order</div>
@@ -53,43 +52,71 @@
                         SETY
                     </div>
 
-                    @for (int i = 0; i < 2; i++)
-                    {
-                        <input type="hidden" asp-for="Sets[i].Id" />
-                        <input type="hidden" asp-for="Sets[i].MatchId" />
-                        <input type="hidden" asp-for="Sets[i].SetNumber" />
+                    <input type="hidden" asp-for="Sets[0].Id" />
+                    <input type="hidden" asp-for="Sets[0].MatchId" />
+                    <input type="hidden" asp-for="Sets[0].SetNumber" />
 
-                        <div class="border rounded-3 p-3 mb-2 bg-body-tertiary">
-                            <div class="row align-items-center justify-content-center">
-                                <div class="col-5">
-                                    <input class="form-control text-center" asp-for="Sets[i].ScoreTeam1" inputmode="numeric" />
-                                    <span class="text-danger small" asp-validation-for="Sets[i].ScoreTeam1"></span>
-                                </div>
+                    <div class="border rounded-3 p-3 mb-2 bg-body-tertiary">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-5">
+                                <input class="form-control text-center" asp-for="Sets[0].ScoreTeam1" type="number" inputmode="numeric" />
+                            </div>
 
-                                <div class="col-2 text-center text-muted fw-bold">:</div>
+                            <div class="col-2 text-center text-muted fw-bold">:</div>
 
-                                <div class="col-5">
-                                    <input class="form-control text-center" asp-for="Sets[i].ScoreTeam2" inputmode="numeric" />
-                                    <span class="text-danger small" asp-validation-for="Sets[i].ScoreTeam2"></span>
-                                </div>
+                            <div class="col-5">
+                                <input class="form-control text-center" asp-for="Sets[0].ScoreTeam2" type="number" inputmode="numeric" />
                             </div>
                         </div>
-                    }
+                    </div>
 
                     @{
                         var winOne = 0;
                         var winTwo = 0;
+                        var showSecondSet = false;
+                        var showThirdSet = false;
 
-                        foreach (var set in Model.Sets.Take(2))
+                        foreach (var set in Model.Sets.OrderBy(x => x.SetNumber).Take(2))
                         {
                             if (set.ScoreTeam1 is null || set.ScoreTeam2 is null)
                                 continue;
 
-                            if (set.ScoreTeam1 > set.ScoreTeam2) winOne++;
-                            else if (set.ScoreTeam2 > set.ScoreTeam1) winTwo++;
+                            if (set.ScoreTeam1 > set.ScoreTeam2)
+                                winOne++;
+                            else if (set.ScoreTeam2 > set.ScoreTeam1)
+                                winTwo++;
+
+                            showThirdSet = (winOne == 1 && winTwo == 1);
                         }
 
-                        var showThirdSet = (winOne == 1 && winTwo == 1);
+                        if (Model.Sets[0].ScoreTeam1 is not null && Model.Sets[0].ScoreTeam2 is not null)
+                        {
+                            var team1Score = Model.Sets[0].ScoreTeam1!.Value;
+                            var team2Score = Model.Sets[0].ScoreTeam2!.Value;
+
+                            showSecondSet = Math.Max(team1Score, team2Score) >= 11 && Math.Abs(team1Score - team2Score) >= 2;
+                        }
+                    }
+
+                    <input type="hidden" asp-for="Sets[1].Id" />
+                    <input type="hidden" asp-for="Sets[1].MatchId" />
+                    <input type="hidden" asp-for="Sets[1].SetNumber" />
+
+                    @if (showSecondSet)
+                    {
+                    <div class="border rounded-3 p-3 mb-2 bg-body-tertiary">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-5">
+                                <input class="form-control text-center" asp-for="Sets[1].ScoreTeam1" type="number" inputmode="numeric" />
+                            </div>
+
+                            <div class="col-2 text-center text-muted fw-bold">:</div>
+
+                            <div class="col-5">
+                                <input class="form-control text-center" asp-for="Sets[1].ScoreTeam2" type="number" inputmode="numeric" />
+                            </div>
+                        </div>
+                    </div>
                     }
 
                     @if (showThirdSet)
@@ -101,15 +128,13 @@
                         <div class="border rounded-3 p-3 mb-2 bg-body-tertiary">
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-5">
-                                    <input class="form-control text-center" asp-for="Sets[2].ScoreTeam1" inputmode="numeric" />
-                                    <span class="text-danger small" asp-validation-for="Sets[2].ScoreTeam1"></span>
+                                    <input class="form-control text-center" asp-for="Sets[2].ScoreTeam1" type="number" inputmode="numeric" />
                                 </div>
 
                                 <div class="col-2 text-center text-muted fw-bold">:</div>
 
                                 <div class="col-5">
-                                    <input class="form-control text-center" asp-for="Sets[2].ScoreTeam2" inputmode="numeric" />
-                                    <span class="text-danger small" asp-validation-for="Sets[2].ScoreTeam2"></span>
+                                    <input class="form-control text-center" asp-for="Sets[2].ScoreTeam2" type="number" inputmode="numeric" />
                                 </div>
                             </div>
 
@@ -122,10 +147,7 @@
                     <hr class="my-4" />
 
                     <div class="d-flex justify-content-between">
-                        <a class="btn btn-outline-primary"
-                           asp-controller="Tournament"
-                           asp-action="Detail"
-                           asp-route-id="@Model.TournamentId">
+                        <a class="btn btn-outline-primary" asp-controller="Tournament" asp-action="Detail" asp-route-id="@Model.TournamentId">
                             Zpět
                         </a>
 

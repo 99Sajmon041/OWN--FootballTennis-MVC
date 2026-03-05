@@ -37,7 +37,7 @@ namespace FootballTennis.Web.Controllers
             catch(ConflictException ex)
             {
                 TempData["Error"] = ex.Message;
-                return View(model);
+                return RedirectToAction(nameof(Update), new { id, tournamentId });
             }
         }
     }

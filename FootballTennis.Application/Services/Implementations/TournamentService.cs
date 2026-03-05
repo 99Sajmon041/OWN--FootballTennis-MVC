@@ -137,8 +137,11 @@ public sealed class TournamentService(
             var winOne = 0;
             var winTwo = 0;
 
-            foreach (var set in match.Sets)
+            foreach (var set in match.Sets.OrderBy(s => s.SetNumber))
             {
+                if (set.ScoreTeam1 is null || set.ScoreTeam2 is null)
+                    break;
+
                 if (set.ScoreTeam1 > set.ScoreTeam2)
                     winOne++;
                 else if (set.ScoreTeam2 > set.ScoreTeam1)
@@ -149,15 +152,20 @@ public sealed class TournamentService(
 
             var vmMatch = model.Matches.First(x => x.Id == match.Id);
 
-            if (winOne == 0 && winTwo == 0)
+            vmMatch.ScoreText = $"{winOne} : {winTwo}";
+
+            if (winOne == 2 || winTwo == 2)
             {
-                vmMatch.ScoreText = "-";
-                vmMatch.IsPlayed = false;
+                vmMatch.MatchStatus = MatchStatus.Played;
+            }
+            else if (winOne + winTwo > 0)
+            {
+                vmMatch.MatchStatus = MatchStatus.Playing;
             }
             else
             {
-                vmMatch.ScoreText = $"{winOne} : {winTwo}";
-                vmMatch.IsPlayed = true;
+                vmMatch.ScoreText = "-";
+                vmMatch.MatchStatus = MatchStatus.NotPlayed;
             }
         }
 

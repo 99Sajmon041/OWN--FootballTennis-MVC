@@ -14,4 +14,15 @@ public static class EnumHelper
             _ => "Neznámý"
         };
     }
+
+    public static string GetCzechMatchStatusName(MatchStatus status)
+    {
+        return status switch
+        {
+            MatchStatus.NotPlayed => "Neodehráno",
+            MatchStatus.Playing => "Rozehráno",
+            MatchStatus.Played => "Dohráno",
+            _ => "Neznámo"
+        };
+    }
 }

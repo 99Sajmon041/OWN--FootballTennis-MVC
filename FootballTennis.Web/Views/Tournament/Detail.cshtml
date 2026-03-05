@@ -64,7 +64,7 @@ else
 
                     <dt class="col-sm-4">Odehrané zápasy</dt>
                     <dd class="col-sm-8">
-                        @(Model.Status == Status.Scheduled ? "Turnaj není zahájen" : Model.Matches.Where(x => x.IsPlayed).Count().ToString() + " / " + Model.MatchesCount.ToString())
+                        @(Model.Status == Status.Scheduled ? "Turnaj není zahájen" : Model.Matches.Where(x => x.MatchStatus == MatchStatus.Played).Count().ToString() + " / " + Model.MatchesCount.ToString())
                     </dd>
 
                 </dl>
@@ -188,11 +188,17 @@ else
                                 <tr>
                                     <td>@match.TeamOneName</td>
                                     <td>@match.TeamTwoName</td>
-                                    <td>@(match.IsPlayed ? "Odehráno" : "Nehráno")</td>
+                                    <td>@EnumHelper.GetCzechMatchStatusName(match.MatchStatus)</td>
                                     <td class="text-center">
-                                        @if (match.IsPlayed)
+                                        @if (match.MatchStatus == MatchStatus.Played)
                                         {
                                             <span class="badge bg-success px-3 py-2 rounded-pill">
+                                                @match.ScoreText
+                                            </span>
+                                        }
+                                        else if (match.MatchStatus == MatchStatus.Playing)
+                                        {
+                                            <span class="badge bg-info px-3 py-2 rounded-pill">
                                                 @match.ScoreText
                                             </span>
                                         }
