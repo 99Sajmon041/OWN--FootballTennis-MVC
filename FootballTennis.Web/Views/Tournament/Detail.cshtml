@@ -83,6 +83,7 @@ else
                             <th>ID</th>
                             <th>Název týmu</th>
                             <th>Hráči</th>
+                            <th>Počet výher</th>
                             <th>
                                 Akce
                             </th>
@@ -91,13 +92,23 @@ else
                     <tbody>
                         @if(Model.TeamsCount > 0)
                         {
-                            @foreach(var team in Model.Teams)
+                            @foreach(var team in Model.Teams.OrderByDescending(x => x.WinsCount).ThenBy(x => x.Name))
                             {
                                 <tr>
                                     <td>@team.Id</td>
                                     <td>@team.Name</td>
                                     <td>
                                         @CollectionHelper.GetTeamPlayersAsString(team.TeamPlayers)
+                                    </td>
+                                    <td>
+                                        @if (Model.Status == Status.Scheduled)
+                                        {
+                                            <span>-</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@team.WinsCount</span>
+                                        }
                                     </td>
                                     <td>
                                         @if (Model.Status == Status.Scheduled)
@@ -275,11 +286,22 @@ else
                 Zpět
             </a>
 
-            @if (Model.Status != Status.Scheduled)
+            @if (Model.Status == Status.Finished)
             {
-                <a class="btn btn-primary" asp-action="Statistics" asp-controller="Tournament" asp-route-id="@Model.Id">
-                    Tabulka / Statistiky
+                <a class="btn btn-success" asp-action="Statistics" asp-controller="Tournament" asp-route-id="@Model.Id">
+                    Tabulka / statistiky
                 </a>
+            }
+            else if (User.IsInRole(nameof(AdminRole.Admin)) && Model.Status == Status.InProgress)
+            {
+                <form method="post" asp-action="Evaluate" asp-controller="Tournament" asp-route-id="@Model.Id">
+                    @Html.AntiForgeryToken()
+
+                    <button type="submit" class="btn btn-success"
+                            disabled="@(!Model.Matches.All(x => x.MatchStatus == MatchStatus.Played))">
+                        Vyhodnotit turnaj
+                    </button>
+                </form>
             }
         </div>
     </div>

@@ -143,6 +143,7 @@ public class MatchService(
             }
         }
 
+        match.PlayedAt = DateTime.UtcNow;
 
         await unitOfWork.SaveChangesAsync(ct);
 

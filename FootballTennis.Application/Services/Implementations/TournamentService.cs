@@ -150,6 +150,17 @@ public sealed class TournamentService(
                     continue;
             }
 
+            if (winOne > winTwo)
+            {
+                var vmTeam = model.Teams.First(x => x.Id == match.TeamOne.Id);
+                vmTeam.WinsCount++;
+            }
+            else if (winOne < winTwo)
+            {
+                var vmTeam = model.Teams.First(x => x.Id == match.TeamTwo.Id);
+                vmTeam.WinsCount++;
+            }
+
             var vmMatch = model.Matches.First(x => x.Id == match.Id);
 
             vmMatch.ScoreText = $"{winOne} : {winTwo}";
@@ -277,5 +288,145 @@ public sealed class TournamentService(
 
         tournament.Status = Status.InProgress;
         await unitOfWork.SaveChangesAsync(ct);
+    }
+
+    public async Task EvaluateTournamentAsync(int tournamentId, CancellationToken ct)
+    {
+        var tournament = await unitOfWork.TournamentRepository.GetTournamentForEvaluateAsync(tournamentId, ct);
+        if (tournament is null)
+        {
+            logger.LogWarning("Tournament was not found or is not able to evaluate. Tournament ID: {TournamentId}.", tournamentId);
+            throw new NotFoundException("Turnaj nebyl nalezen nebo ho již není možné vyhodnotit.");
+        }
+
+        foreach (var match in tournament.Matches)
+        {
+            int teamOneSetsWin = 0;
+            int teamTwoSetsWin = 0;
+
+            foreach (var set in match.Sets)
+            {
+                if (set.ScoreTeam1 is null || set.ScoreTeam2 is null || (set.ScoreTeam1 == 0 && set.ScoreTeam2 == 0))
+                {
+                    logger.LogWarning("Failed to evaluate tournament. Set with ID: {SetId} has no valid values, Match ID: {MatchId}.", set.Id, match.Id);
+                    throw new DomainException($"Nelze vyhodnotit turnaj. Set s ID: {set.Id} v zápase s ID: {match.Id} má neplatné  hodnoty.");
+                }
+
+                if (set.ScoreTeam1 > set.ScoreTeam2)
+                    teamOneSetsWin++;
+                else
+                    teamTwoSetsWin++;
+            }
+
+            if (teamOneSetsWin != 2 && teamTwoSetsWin != 2)
+            {
+                logger.LogWarning("Failed to evaluate tournament. No winner in Match with ID: {MatchId}.", match.Id);
+                throw new DomainException($"Nelze vyhodnotit turnaj. Zápas s ID: {match.Id} nemá vítěze.");
+            }
+        }
+
+        tournament.Status = Status.Finished;
+
+        await unitOfWork.SaveChangesAsync(ct);
+
+        logger.LogInformation("Tournament with ID: {TournamentId} was finished.", tournamentId);
+    }
+
+    public async Task<TournamentStatisticsViewModel> GetTournamentStatisticsAsync(int tournamentId, CancellationToken ct)
+    {
+        var tournament = await unitOfWork.TournamentRepository.GetTournamentForStatisticAsync(tournamentId, ct);
+        if (tournament is null)
+        {
+            logger.LogWarning("Tournament was not found or is not finished. Tournament ID: {TournamentId}.", tournamentId);
+            throw new NotFoundException("Turnaj nebyl nalezen nebo ještě nebyl vyhodnocen.");
+        }
+
+        var teamsStats = new List<TournamentStatisticsListItemViewModel>();
+
+        foreach (var team in tournament.Teams)
+        {
+            int setWins = 0;
+            int matchWins = 0;
+            int allSetsWins = 0;
+            int allSetsLose = 0;
+            int? pointsInLostSets = 0;
+
+            foreach (var match in tournament.Matches.Where(x => x.TeamOne == team))
+            {
+                setWins = 0;
+
+                foreach (var set in match.Sets.Where(x => x.SetNumber != 3))
+                {
+                    if (set.ScoreTeam1 > set.ScoreTeam2)
+                    {
+                        setWins++;
+                        allSetsWins++;
+                    }
+                    else
+                    {
+                        pointsInLostSets += set.ScoreTeam1;
+                        allSetsLose++;
+                    }
+                }
+
+                if (setWins >= 2)
+                    matchWins++;
+            }
+
+            setWins = 0;
+
+            foreach (var match in tournament.Matches.Where(x => x.TeamTwo == team))
+            {
+                setWins = 0;
+
+                foreach (var set in match.Sets.Where(x => x.SetNumber != 3))
+                {
+                    if (set.ScoreTeam2 > set.ScoreTeam1)
+                    {
+                        setWins++;
+                        allSetsWins++;
+                    }
+                    else
+                    {
+                        pointsInLostSets += set.ScoreTeam2;
+                        allSetsLose++;
+                    }
+                }
+
+                if (setWins >= 2)
+                    matchWins++;
+            }
+
+
+
+            var teamStats = new TournamentStatisticsListItemViewModel
+            {
+                TeamId = team.Id,
+                Position = 0,
+                TeamName = team.Name,
+                MatchesPlayed = tournament.Teams.Count - 1,
+                WonMatches = matchWins,
+                SetsDifference = allSetsWins - allSetsLose,
+                PointsInLostSets = pointsInLostSets
+            };
+
+            teamsStats.Add(teamStats);
+        }
+
+        var model = new TournamentStatisticsViewModel
+        {
+            TournamentId = tournament.Id,
+            TeamsStatistics = []
+        };
+
+        model.TeamsStatistics = teamsStats
+            .OrderByDescending(x => x.WonMatches)
+            .ThenByDescending(x => x.SetsDifference)
+            .ThenByDescending(x => x.PointsInLostSets)
+            .ToList();
+
+        // dořešit position - je to dle indexu
+
+        return model;
     }
 }

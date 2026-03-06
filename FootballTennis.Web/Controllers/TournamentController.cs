@@ -123,5 +123,28 @@ namespace FootballTennis.Web.Controllers
                 return RedirectToAction(nameof(Detail), new { id });
             }
         }
+
+        public async Task<IActionResult> Statistics(int id, CancellationToken ct)
+        {
+            var model = await tournamentService.GetTournamentStatisticsAsync(id, ct);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = nameof(AdminRole.Admin))]
+        public async Task<IActionResult> Evaluate(int id, CancellationToken ct)
+        {
+            try
+            {
+                await tournamentService.EvaluateTournamentAsync(id, ct);
+                return RedirectToAction(nameof(Statistics), new { id });
+            }
+            catch (DomainException ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction(nameof(Detail), new { id });
+            }
+        }
     }
 }

@@ -11,6 +11,9 @@ public sealed class TeamListItemViewModel
     [Display(Name = "Název")]
     public string Name { get; set; } = default!;
 
+    [Display(Name = "Počet výher")]
+    public int WinsCount { get; set; } = 0;
+
     [Display(Name = "Hráči")]
     public List<PlayerViewModel> TeamPlayers { get; set; } = [];
 }

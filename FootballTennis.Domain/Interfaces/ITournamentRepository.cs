@@ -14,4 +14,6 @@ public interface ITournamentRepository
     Task<Tournament?> GetTournamentByIdAsync(int tournamentId, CancellationToken ct);
     Task<Tournament?> GetTournamentWithDetailsAsync(int tournamentId, CancellationToken ct);
     Task<bool> IsTournamentStatusScheduled(int tournamentId, CancellationToken ct);
+    Task<Tournament?> GetTournamentForEvaluateAsync(int tournamentId, CancellationToken ct);
+    Task<Tournament?> GetTournamentForStatisticAsync(int tournamentId, CancellationToken ct);
 }
