@@ -4,6 +4,7 @@ using FootballTennis.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FootballTennis.Infrastructure.Migrations
 {
     [DbContext(typeof(FootballTennisDbContext))]
-    partial class FootballTennisDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260307125412_AddWinnerColumntoTournamentTable")]
+    partial class AddWinnerColumntoTournamentTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -192,13 +195,16 @@ namespace FootballTennis.Infrastructure.Migrations
                     b.Property<int?>("WinnerId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("WinnerId1")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Date");
 
                     b.HasIndex("Status");
 
-                    b.HasIndex("WinnerId");
+                    b.HasIndex("WinnerId1");
 
                     b.ToTable("Tournaments");
                 });
@@ -491,8 +497,7 @@ namespace FootballTennis.Infrastructure.Migrations
                 {
                     b.HasOne("FootballTennis.Domain.Entities.Team", "Winner")
                         .WithMany()
-                        .HasForeignKey("WinnerId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("WinnerId1");
 
                     b.Navigation("Winner");
                 });

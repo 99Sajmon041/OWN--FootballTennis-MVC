@@ -1,0 +1,616 @@
+[2026-03-07 10:03:24 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:03:25 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:40 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:43 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:45 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:46 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:47 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:50 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:51 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:52 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:54 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:55 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:03:57 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:01 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 1
+[2026-03-07 10:04:02 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:04 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:05 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:06 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:07 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:08 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:10 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:04:12 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 10:13:10 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:13:16 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:13:20 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:13:21 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:13:28 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:13:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:14:30 INF] FootballTennis.Application.Services.Implementations.AccountService User tries to Log-in but credentials are worng. Logging e-mail: admin@nohejbal.cz
+[2026-03-07 10:15:01 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-03-07 10:15:03 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:15:07 INF] FootballTennis.Application.Services.Implementations.PlayerService Player with ID: 1 was updated successfully.
+[2026-03-07 10:15:07 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 10:15:11 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:15:21 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:15:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:15:38 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:15:42 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:15:45 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:16:26 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:16:33 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-07 10:16:33 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:16:41 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-07 10:16:41 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:16:45 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:16:52 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-07 10:16:52 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:16:54 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:0000017D, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method934(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ModelExplorer.get_Model()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateHidden(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:17:00 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:17:03 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:17:05 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:00000197, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method962(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:17:09 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:17:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-07 10:17:21 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 5, SetNumber: 3, Score: 6:13.
+[2026-03-07 10:17:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-07 10:17:29 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-07 10:17:40 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 5 was updated successfully.
+[2026-03-07 10:17:40 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 5.
+[2026-03-07 10:17:47 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-07 10:17:56 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 9, SetNumber: 2, Score: 15:16.
+[2026-03-07 10:17:57 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-07 10:18:03 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 9 was updated successfully.
+[2026-03-07 10:18:03 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-07 10:18:11 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-07 10:18:15 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 9 was updated successfully.
+[2026-03-07 10:18:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-07 10:18:22 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 9 was updated successfully.
+[2026-03-07 10:18:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 9.
+[2026-03-07 10:18:27 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 11.
+[2026-03-07 10:18:32 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 11 was updated successfully.
+[2026-03-07 10:18:32 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 11.
+[2026-03-07 10:18:36 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:18:43 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-07 10:18:43 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:18:48 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-07 10:18:48 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:18:52 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 14.
+[2026-03-07 10:18:56 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 14 was updated successfully.
+[2026-03-07 10:18:56 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 14.
+[2026-03-07 10:19:04 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:19:05 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:0000024D, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method1414(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:19:10 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:19:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:19:16 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:00000267, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method1436(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:19:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:19:23 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:0000026F, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method1458(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:21:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:21:06 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:00000277, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method1480(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:22:10 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:22:12 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS51D5K09T:0000027F, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method1502(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:28:04 INF] FootballTennis.Application.Services.Implementations.AccountService User tries to Log-in but e-mail does not exists. Email: dfas@se.cz
+[2026-03-07 10:29:51 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-03-07 10:30:21 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:30:24 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 10:33:59 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:34:00 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 10:35:13 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:37:13 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:37:14 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 10:37:17 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:37:31 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-07 10:37:31 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:37:41 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:37:43 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-07 10:37:43 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:38:18 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:38:22 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-07 10:38:22 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:38:27 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:38:33 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 12 was updated successfully.
+[2026-03-07 10:38:33 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 12.
+[2026-03-07 10:46:49 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:46:51 WRN] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 400, TraceId: 0HNJS5K92UL28:0000005B, Path: /Tournament/1/Matches/1/Update, Message: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at lambda_method773(Closure, MatchUpdateViewModel)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ExpressionMetadataProvider.<>c__DisplayClass0_0`2.<FromLambdaExpression>g__modelAccessor|0(Object container)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.<ExecuteAsync>b__24_0() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 123
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_Match_Update.ExecuteAsync() in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Views\Match\Update.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 10:53:44 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 10:54:02 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 10:54:05 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:54:13 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-07 10:54:13 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 10:54:20 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 10:54:26 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 15 was updated successfully.
+[2026-03-07 10:54:26 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 10:54:33 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 15 was updated successfully.
+[2026-03-07 10:54:33 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 10:54:39 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 15 was updated successfully.
+[2026-03-07 10:54:39 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 10:56:21 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 15, SetNumber: 2, Score: 16:13.
+[2026-03-07 10:56:21 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 10:56:25 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 15 was updated successfully.
+[2026-03-07 10:56:25 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 10:56:30 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 15 was updated successfully.
+[2026-03-07 10:56:30 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 15.
+[2026-03-07 11:01:03 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 11:01:12 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 11:01:18 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 11:01:47 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 11:01:47 WRN] FootballTennis.Application.Services.Implementations.TournamentService Failed to evaluate tournament. Set with ID: 64 has no valid values, Match ID: 1.
+[2026-03-07 11:02:23 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 11:02:58 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-07 11:02:58 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 11:03:03 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 1 was updated successfully.
+[2026-03-07 11:03:03 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 1.
+[2026-03-07 11:03:06 WRN] FootballTennis.Application.Services.Implementations.TournamentService Failed to evaluate tournament. Set with ID: 9 has no valid values, Match ID: 3.
+[2026-03-07 11:03:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 2.
+[2026-03-07 11:03:17 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 3.
+[2026-03-07 11:03:22 WRN] FootballTennis.Application.Services.Implementations.TournamentService Failed to evaluate tournament. Set with ID: 9 has no valid values, Match ID: 3.
+[2026-03-07 11:04:10 WRN] FootballTennis.Application.Services.Implementations.TournamentService Failed to evaluate tournament. Set with ID: 9 has no valid values, Match ID: 3.
+[2026-03-07 11:04:14 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 3.
+[2026-03-07 11:41:43 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 11:41:46 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 11:42:21 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:42:30 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 7, SetNumber: 2, Score: 11:14.
+[2026-03-07 11:42:30 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:42:35 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:43:32 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 7 was updated successfully.
+[2026-03-07 11:43:32 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:43:50 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 7 was updated successfully.
+[2026-03-07 11:43:50 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:43:58 WRN] FootballTennis.Application.Services.Implementations.MatchService Invalid finished set score. Match ID: 7, SetNumber: 3, Score: 2:12.
+[2026-03-07 11:43:59 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:44:09 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 7 was updated successfully.
+[2026-03-07 11:44:09 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 7.
+[2026-03-07 11:44:15 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 6.
+[2026-03-07 11:44:19 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 6 was updated successfully.
+[2026-03-07 11:44:19 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 6.
+[2026-03-07 11:44:29 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 6.
+[2026-03-07 11:44:33 INF] FootballTennis.Application.Services.Implementations.MatchService The score of match with ID: 6 was updated successfully.
+[2026-03-07 11:44:33 INF] FootballTennis.Application.Services.Implementations.MatchService Match loaded for update. Match ID: 6.
+[2026-03-07 11:44:41 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 11:44:41 INF] FootballTennis.Application.Services.Implementations.TournamentService Tournament with ID: 1 was finished.
+[2026-03-07 11:44:41 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 11:46:40 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 11:57:54 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 11:57:56 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 13:54:12 WRN] Microsoft.EntityFrameworkCore.Model.Validation The foreign key property 'Tournament.WinnerId1' was created in shadow state because a conflicting property with the simple name 'WinnerId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+[2026-03-07 13:54:24 WRN] Microsoft.EntityFrameworkCore.Model.Validation The foreign key property 'Tournament.WinnerId1' was created in shadow state because a conflicting property with the simple name 'WinnerId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+[2026-03-07 13:55:01 WRN] Microsoft.EntityFrameworkCore.Model.Validation The foreign key property 'Tournament.WinnerId1' was created in shadow state because a conflicting property with the simple name 'WinnerId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+[2026-03-07 13:55:13 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 13:55:18 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 13:55:21 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 14:09:23 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:09:50 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 14:09:53 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 14:10:05 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 14:10:13 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 14:15:14 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:16:55 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:41:23 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:41:26 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 14:41:29 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 14:41:43 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:41:47 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:42:20 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:42:36 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:42:41 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:42:43 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:42:45 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:43:00 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 14:43:03 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 14:59:49 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 14:59:51 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 14:59:54 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:01:59 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:02:01 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:02:03 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:02:18 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:02:26 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:02:59 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:03:03 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:03:09 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:03:15 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:03:21 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:08:43 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:47 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:48 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:50 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:50 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:52 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:53 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:08:55 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:09:01 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:09:03 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:09:06 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:09:21 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 15:09:26 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:09:29 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:09:32 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:42:00 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:42:01 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:42:03 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:42:11 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:44:12 ERR] Microsoft.EntityFrameworkCore.Database.Connection An error occurred using the connection to database 'FootballTennis' on server 'SIMON-PC'.
+[2026-03-07 15:44:13 ERR] FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware Handled exception. StatusCode: 500, TraceId: 0HNJSAVU9I4HT:0000000D, Path: /Tournament, Message: A task was canceled.
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FootballTennis.Infrastructure.Repositories.TournamentRepository.GetAllTournamentsAsync(PagedRequest request, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Infrastructure\Repositories\TournamentRepository.cs:line 34
+   at FootballTennis.Application.Services.Implementations.TournamentService.GetAllTournamentsAsync(PagedRequest request, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Application\Services\Implementations\TournamentService.cs:line 23
+   at FootballTennis.Web.Controllers.TournamentController.Index(PagedRequest request, CancellationToken ct) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\Controllers\TournamentController.cs:line 16
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at FootballTennis.Web.MiddleWare.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\simon\Desktop\FootballTennis\FootballTennis.Web\MiddleWare\ExceptionHandlingMiddleware.cs:line 12
+[2026-03-07 15:44:13 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 15:44:15 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 15:44:17 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:20:21 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:20:27 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:20:29 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:20:33 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:20:34 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:20:36 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:20:40 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:20:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:20:46 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:20:59 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:34:33 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:34:34 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:34:37 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:50:15 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:50:18 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:50:21 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:50:59 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:51:06 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:53:32 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:53:45 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:54:02 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:54:55 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:55:34 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:55:37 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:55:40 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 16:55:57 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:56:27 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:56:38 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 16:56:39 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 16:57:04 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:00:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:00:35 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:00:38 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:02:05 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:03:45 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:03:49 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:03:53 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:03:55 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:04:00 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:09:19 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:09:21 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:09:38 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:09:58 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:10:01 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:10:10 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:11:41 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:11:42 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:12:25 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:12:34 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:12:36 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:12:39 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:12:44 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:12:46 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:12:52 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:12:53 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:12:55 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:13:09 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:13:13 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:13:29 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 17:13:31 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:15:55 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:19:26 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:19:34 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:19:38 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:52:24 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:52:50 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:53:06 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:56:26 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:56:35 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:56:37 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:58:04 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 17:58:06 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 17:58:08 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 18:00:09 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 18:00:42 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 18:00:46 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 18:00:58 ERR] Microsoft.AspNetCore.Identity.SignInManager RefreshSignInAsync prevented because the user is not currently authenticated. Use SignInAsync instead for initial sign in.
+[2026-03-07 18:04:27 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 18:04:28 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 18:04:44 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-03-07 18:05:04 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 18:05:34 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3
+[2026-03-07 18:05:35 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 18:05:37 INF] FootballTennis.Application.Services.Implementations.PlayerService User retrieved a list of all players. Total count: 20
+[2026-03-07 18:05:37 INF] FootballTennis.Application.Services.Implementations.TournamentService User retrieved a list of all tournaments. Total count: 3

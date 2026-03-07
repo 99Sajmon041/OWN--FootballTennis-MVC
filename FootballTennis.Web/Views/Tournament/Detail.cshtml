@@ -194,7 +194,7 @@ else
                     <tbody>
                         @if (Model.MatchesCount > 0)
                         {
-                            @foreach (var match in Model.Matches)
+                            @foreach (var match in Model.Matches.OrderBy(x => x.Order))
                             {
                                 <tr>
                                     <td>@match.TeamOneName</td>

@@ -107,10 +107,10 @@
                 <th>Adresa</th>
                 <th>Datum</th>
                 <th>Stav</th>
+                <th>Vítěz</th>
                 <th>Počet hráčů v týmu</th>
                 <th>Počet týmů</th>
                 <th>Počet zápasů</th>
-                <th>Vítěz</th>
                 <th>Akce</th>
             </tr>
         </thead>
@@ -125,10 +125,14 @@
                         <td>@item.Address</td>
                         <td>@item.Date.ToString("dd.MM.yyyy")</td>
                         <td>@EnumHelper.GetCzechStatusName(item.Status)</td>
+                        <td>
+                            <span class="@(item.WinnerName != null ? "badge bg-gold px-3 py-2 rounded-pill" : "")">
+                                @(item.WinnerName is null ? "Neurčeno" : item.WinnerName)
+                            </span>
+                        </td>
                         <td>@item.TeamPlayersCount</td>
                         <td>@(item.TeamsCount == 0 ? "Zatím nejsou teamy" : item.TeamsCount)</td>
                         <td>@(item.MatchesCount == 0 ? "Zatím nejsou zápasy" : item.MatchesCount)</td>
-                        <td>@(item.WinnerName is null ? "Zatím není" : item.WinnerName)</td>
                         <td>
                             <div class="d-flex align-items-center gap-2 flex-nowrap">
                                 <a class="btn btn-sm btn-outline-info"

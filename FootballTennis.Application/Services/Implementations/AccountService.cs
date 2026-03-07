@@ -40,14 +40,6 @@ public sealed class AccountService(
 
         await userManager.UpdateAsync(user);
 
-        var claims = await userManager.GetClaimsAsync(user);
-        if (!claims.Any(x => x.Type == "FullName"))
-        {
-            await userManager.AddClaimAsync(user, new Claim("FullName", "Admin"));
-        }
-
-        await signInManager.RefreshSignInAsync(user);
-
         return true;
     }
 

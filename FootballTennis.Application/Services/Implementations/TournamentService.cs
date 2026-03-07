@@ -304,18 +304,19 @@ public sealed class TournamentService(
             int teamOneSetsWin = 0;
             int teamTwoSetsWin = 0;
 
-            foreach (var set in match.Sets)
+            foreach (var set in match.Sets.OrderBy(x => x.SetNumber))
             {
-                if (set.ScoreTeam1 is null || set.ScoreTeam2 is null || (set.ScoreTeam1 == 0 && set.ScoreTeam2 == 0))
-                {
-                    logger.LogWarning("Failed to evaluate tournament. Set with ID: {SetId} has no valid values, Match ID: {MatchId}.", set.Id, match.Id);
-                    throw new DomainException($"Nelze vyhodnotit turnaj. Set s ID: {set.Id} v zápase s ID: {match.Id} má neplatné  hodnoty.");
-                }
-
-                if (set.ScoreTeam1 > set.ScoreTeam2)
+                if (set.ScoreTeam1 is null || set.ScoreTeam2 is null)
+                    break;
+                else if (set.ScoreTeam1 > set.ScoreTeam2)
                     teamOneSetsWin++;
-                else
+                else if(set.ScoreTeam1 < set.ScoreTeam2)
                     teamTwoSetsWin++;
+                else
+                {
+                    logger.LogWarning("Failed to evaluate tournament. Teams has same score in Match with ID: {MatchId}.", match.Id);
+                    throw new DomainException($"Nelze vyhodnotit turnaj. Zápas s ID: {match.Id} je nerozhodný.");
+                }
             }
 
             if (teamOneSetsWin != 2 && teamTwoSetsWin != 2)
@@ -325,7 +326,15 @@ public sealed class TournamentService(
             }
         }
 
+        var teamsStatistics = GetTeamsStatistics(tournament);
+
+        foreach (var team in tournament.Teams)
+        {
+            team.Position = teamsStatistics.First(x => x.TeamId == team.Id).Position;
+        }
+
         tournament.Status = Status.Finished;
+        tournament.WinnerId = teamsStatistics.First().TeamId;
 
         await unitOfWork.SaveChangesAsync(ct);
 
@@ -341,92 +350,77 @@ public sealed class TournamentService(
             throw new NotFoundException("Turnaj nebyl nalezen nebo ještě nebyl vyhodnocen.");
         }
 
-        var teamsStats = new List<TournamentStatisticsListItemViewModel>();
+        var teamsStatistics = GetTeamsStatistics(tournament);
+
+        return new TournamentStatisticsViewModel
+        {
+            TournamentId = tournament.Id,
+            Name = tournament.Name,
+            TeamsStatistics = teamsStatistics
+        };
+    }
+
+    private static List<TournamentStatisticsListItemViewModel> GetTeamsStatistics(Tournament tournament)
+    {
+        var teamsStatistics = new List<TournamentStatisticsListItemViewModel>();
 
         foreach (var team in tournament.Teams)
         {
-            int setWins = 0;
-            int matchWins = 0;
-            int allSetsWins = 0;
-            int allSetsLose = 0;
-            int? pointsInLostSets = 0;
+            var teamMatches = tournament.Matches
+                .Where(x => x.TeamOneId == team.Id || x.TeamTwoId == team.Id)
+                .ToList();
 
-            foreach (var match in tournament.Matches.Where(x => x.TeamOne == team))
+            var wonMatches = 0;
+            var wonSets = 0;
+            var setsPlayed = 0;
+            var pointsInLostSets = 0;
+
+            foreach (var match in teamMatches)
             {
-                setWins = 0;
+                var teamWonSetsInMatch = 0;
+                var isTeamOne = match.TeamOneId == team.Id;
 
-                foreach (var set in match.Sets.Where(x => x.SetNumber != 3))
+                foreach (var set in match.Sets.Where(x => x.SetNumber <= 2))
                 {
-                    if (set.ScoreTeam1 > set.ScoreTeam2)
+                    var teamScore = isTeamOne ? set.ScoreTeam1 : set.ScoreTeam2;
+                    var opponentScore = isTeamOne ? set.ScoreTeam2 : set.ScoreTeam1;
+
+                    if (teamScore > opponentScore)
                     {
-                        setWins++;
-                        allSetsWins++;
+                        teamWonSetsInMatch++;
+                        wonSets++;
                     }
                     else
                     {
-                        pointsInLostSets += set.ScoreTeam1;
-                        allSetsLose++;
+                        pointsInLostSets += teamScore ?? 0;
                     }
+
+                    setsPlayed++;
                 }
 
-                if (setWins >= 2)
-                    matchWins++;
-            }
-
-            setWins = 0;
-
-            foreach (var match in tournament.Matches.Where(x => x.TeamTwo == team))
-            {
-                setWins = 0;
-
-                foreach (var set in match.Sets.Where(x => x.SetNumber != 3))
+                if (teamWonSetsInMatch == 2)
                 {
-                    if (set.ScoreTeam2 > set.ScoreTeam1)
-                    {
-                        setWins++;
-                        allSetsWins++;
-                    }
-                    else
-                    {
-                        pointsInLostSets += set.ScoreTeam2;
-                        allSetsLose++;
-                    }
+                    wonMatches++;
                 }
-
-                if (setWins >= 2)
-                    matchWins++;
             }
 
-
-
-            var teamStats = new TournamentStatisticsListItemViewModel
+            teamsStatistics.Add(new TournamentStatisticsListItemViewModel
             {
                 TeamId = team.Id,
-                Position = 0,
+                Position = team.Position ?? 0,
                 TeamName = team.Name,
-                MatchesPlayed = tournament.Teams.Count - 1,
-                WonMatches = matchWins,
-                SetsDifference = allSetsWins - allSetsLose,
+                MatchesPlayed = teamMatches.Count,
+                WonMatches = wonMatches,
+                SetsPlayed = setsPlayed,
+                WonSets = wonSets,
                 PointsInLostSets = pointsInLostSets
-            };
-
-            teamsStats.Add(teamStats);
+            });
         }
 
-        var model = new TournamentStatisticsViewModel
-        {
-            TournamentId = tournament.Id,
-            TeamsStatistics = []
-        };
-
-        model.TeamsStatistics = teamsStats
+        return teamsStatistics
             .OrderByDescending(x => x.WonMatches)
             .ThenByDescending(x => x.SetsDifference)
             .ThenByDescending(x => x.PointsInLostSets)
             .ToList();
-
-        // dořešit position - je to dle indexu
-
-        return model;
     }
 }

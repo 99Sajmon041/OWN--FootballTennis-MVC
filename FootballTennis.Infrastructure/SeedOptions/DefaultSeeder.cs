@@ -1,8 +1,9 @@
-﻿using FootballTennis.Shared.Enums;
-using FootballTennis.Infrastructure.Identity;
+﻿using FootballTennis.Infrastructure.Identity;
+using FootballTennis.Shared.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using System.Security.Claims;
 
 namespace FootballTennis.Infrastructure.SeedOptions;
 
@@ -62,6 +63,12 @@ public sealed class DefaultSeeder(
             {
                 logger.LogInformation("Admin role was added to admin account sucessfully.");
             }
+        }
+
+        var claims = await userManager.GetClaimsAsync(deafaultAccount);
+        if (!claims.Any(x => x.Type == "FullName"))
+        {
+            await userManager.AddClaimAsync(deafaultAccount, new Claim("FullName", admin.FullName));
         }
     }
 }

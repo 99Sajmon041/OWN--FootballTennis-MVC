@@ -41,6 +41,11 @@ public sealed class FootballTennisDbContext(DbContextOptions options) : Identity
                 .WithOne(x => x.Tournament)
                 .HasForeignKey(x => x.TournamentId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(x => x.Winner)
+                .WithMany()
+                .HasForeignKey(x => x.WinnerId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
         builder.Entity<Team>(entity =>

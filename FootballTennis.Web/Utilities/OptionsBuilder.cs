@@ -35,6 +35,7 @@ public static class OptionsBuilder
             new SelectListItem { Value = "Address", Text = "Adresa" },
             new SelectListItem { Value = "Date", Text = "Datum" },
             new SelectListItem { Value = "Status", Text = "Stav" },
+            new SelectListItem { Value = "Winner", Text = "Vítěz" },
             new SelectListItem { Value = "TeamPlayersCount", Text = "Počet hráčů v týmu" }
         ];
     }

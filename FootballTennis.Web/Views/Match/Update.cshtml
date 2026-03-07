@@ -15,7 +15,7 @@
             <div class="card-body p-4">
 
                 <form method="post" asp-controller="Match" asp-action="Update" asp-route-id="@Model.Id" asp-route-tournamentId="@Model.TournamentId">
-                    <div asp-validation-summary="All" class="text-danger fw-bold"></div>
+                    <div asp-validation-summary="All" class="text-danger fw-bold text-center"></div>
 
                     @Html.AntiForgeryToken()
 

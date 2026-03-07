@@ -10,6 +10,8 @@ public sealed class Tournament
     public DateTime Date { get; set; }
     public Status Status { get; set; }
     public int TeamPlayersCount { get; set; }
+    public Team? Winner { get; set; }
+    public int? WinnerId { get; set; }
     public List<Team> Teams { get; set; } = [];
     public List<Match> Matches { get; set; } = [];
 }

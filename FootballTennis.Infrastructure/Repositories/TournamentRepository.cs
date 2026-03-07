@@ -14,6 +14,7 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
     {
         var tournaments = context.Tournaments
             .AsNoTracking()
+            .Include(x => x.Teams)
             .Select(x => new TournamentListItemReadModel
             {
                 Id = x.Id,
@@ -24,7 +25,7 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
                 TeamPlayersCount = x.TeamPlayersCount,
                 TeamsCount = x.Teams.Count,
                 MatchesCount = x.Matches.Count,
-                WinnerName = x.Status == Status.Finished ? x.Teams.Where(x => x.Position == 1).Select(x => x.Name).FirstOrDefault() : null
+                WinnerName = x.Winner != null ? x.Winner.Name : null
             });
 
         if (!string.IsNullOrWhiteSpace(request.Search))
@@ -49,6 +50,10 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
             "Status" => request.Desc
                 ? tournaments.OrderByDescending(x => x.Status).ThenByDescending(x => x.Id)
                 : tournaments.OrderBy(x => x.Status).ThenBy(x => x.Id),
+
+            "Winner" => request.Desc
+                ? tournaments.OrderByDescending(x => x.WinnerName).ThenByDescending(x => x.Id)
+                : tournaments.OrderBy(x => x.WinnerName).ThenBy(x => x.Id),
 
             "TeamPlayersCount" => request.Desc
                 ? tournaments.OrderByDescending(x => x.TeamPlayersCount).ThenByDescending(x => x.Id)

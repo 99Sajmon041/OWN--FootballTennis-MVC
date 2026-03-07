@@ -1,9 +1,79 @@
-﻿@model TournamentStatisticsListItemViewModel
+﻿@model TournamentStatisticsViewModel
 
 @{
     ViewData["Title"] = "Vyhodnocení / Statistiky";
 }
 
 <div class="text-center mb-5">
-    <h1 class="display-4">Vyhodnocení turnaje: </h1>
+    <h1 class="display-4 mb-1">Vyhodnocení turnaje</h1>
+    <p>
+        <h3 class="fw-bold text-secondary">@Model.Name</h3>
+    </p>
+</div>
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].Position)</th>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].TeamName)</th>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].WonMatches)</th>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].LostMatches)</th>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].WonSets)</th>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].LostSets)</th>
+                <th>@Html.DisplayNameFor(x => x.TeamsStatistics[0].PointsInLostSets)</th>
+                <th>Statistika týmu</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach(var teamStat in Model.TeamsStatistics)
+                {
+                    <tr>
+                        <td class="text-center">
+                            @{
+                                var badgeClass =
+                                    teamStat.Position == 1 ? "badge bg-gold px-3 py-2 rounded-pill" :
+                                    teamStat.Position == 2 ? "badge bg-silver px-3 py-2 rounded-pill" :
+                                    teamStat.Position == 3 ? "badge bg-bronze px-3 py-2 rounded-pill" :
+                                    "";
+                            }
+
+                            <span class="@badgeClass"> @teamStat.Position</span>
+                        </td>
+                        <td>@teamStat.TeamName</td>
+                        <td>@teamStat.WonMatches / @teamStat.MatchesPlayed</td>
+                        <td>@teamStat.LostMatches</td>
+                        <td>@teamStat.WonSets / @teamStat.SetsPlayed</td>
+                        <td>@teamStat.LostSets</td>
+                        <td>@teamStat.PointsInLostSets</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-info" 
+                                type="button" 
+                                asp-controller="Tournament"
+                                asp-action="TeamStatistics"
+                                asp-route-id="@teamStat.TeamId"
+                                asp-route-tournamentId="@Model.TournamentId">
+                                Zobrazit
+                            </a>
+                        </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+</div>
+
+
+<div class="d-flex justify-content-start mb-4">
+    <p class="text-muted">
+        Veškeré statistiky setů se počítají pouze z 1. a 2. setu kvůli spravedlivému vyhodnocení. Přečtete si 
+        <a class="text-black fw-bold" asp-controller="Home" asp-action="Rules">pravidla</a>
+    </p>
+</div>
+
+
+<div class="d-flex justify-content-start">
+    <a type="button" class="btn btn-outline-primary" asp-controller="Tournament" asp-action="Detail" asp-route-id="@Model.TournamentId">
+        Zpět na detail turnaje
+    </a>
 </div>
