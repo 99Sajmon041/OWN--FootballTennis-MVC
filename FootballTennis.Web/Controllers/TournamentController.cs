@@ -146,5 +146,11 @@ namespace FootballTennis.Web.Controllers
                 return RedirectToAction(nameof(Detail), new { id });
             }
         }
+
+        public async Task<IActionResult> TeamStatistics(int teamId, int tournamentId, CancellationToken ct)
+        {
+            // nahrat model       
+            return View();
+        }
     }
 }

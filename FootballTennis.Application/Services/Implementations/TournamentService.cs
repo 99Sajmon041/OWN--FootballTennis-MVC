@@ -150,17 +150,6 @@ public sealed class TournamentService(
                     continue;
             }
 
-            if (winOne > winTwo)
-            {
-                var vmTeam = model.Teams.First(x => x.Id == match.TeamOne.Id);
-                vmTeam.WinsCount++;
-            }
-            else if (winOne < winTwo)
-            {
-                var vmTeam = model.Teams.First(x => x.Id == match.TeamTwo.Id);
-                vmTeam.WinsCount++;
-            }
-
             var vmMatch = model.Matches.First(x => x.Id == match.Id);
 
             vmMatch.ScoreText = $"{winOne} : {winTwo}";
@@ -168,6 +157,17 @@ public sealed class TournamentService(
             if (winOne == 2 || winTwo == 2)
             {
                 vmMatch.MatchStatus = MatchStatus.Played;
+
+                if (winOne > winTwo)
+                {
+                    var vmTeam = model.Teams.First(x => x.Id == match.TeamOne.Id);
+                    vmTeam.WinsCount++;
+                }
+                else if (winOne < winTwo)
+                {
+                    var vmTeam = model.Teams.First(x => x.Id == match.TeamTwo.Id);
+                    vmTeam.WinsCount++;
+                }
             }
             else if (winOne + winTwo > 0)
             {
