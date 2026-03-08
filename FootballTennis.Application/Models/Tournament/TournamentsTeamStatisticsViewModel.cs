@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using FootballTennis.Application.Models.Player;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FootballTennis.Application.Models.Tournament;
 
@@ -11,5 +12,7 @@ public sealed class TournamentsTeamStatisticsViewModel
     public int WonMatches { get; set; }
     public int LostMatches { get; set; }
     public List<TeamMatchesStatsViewModel> Matches { get; set; } = [];
-    public List<SelectListItem> Teams { get; set; } = []; // nahraji teamy z turnaje v service dle TournamentId (Dropdown)
+    public List<SelectListItem> Teams { get; set; } = [];
+    public List<PlayerViewModel> Players { get; set; } = [];
+    public int TeamId { get; set; }
 }

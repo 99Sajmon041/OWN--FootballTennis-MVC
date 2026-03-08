@@ -140,16 +140,8 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
             .Include(x => x.Matches)
                 .ThenInclude(x => x.Sets)
             .Include(x => x.Teams)
+                .ThenInclude(x => x.TeamPlayers)
+                    .ThenInclude(x => x.Player)
             .FirstOrDefaultAsync(x => x.Id == tournamentId && x.Status == Status.Finished, ct);
-    }
-
-    public async Task<Tournament?> GetTournamentForTeamStatisticAsync(int teamId, int tournamentId, CancellationToken ct)
-    {
-        return await context.Tournaments
-            .AsNoTracking()
-            .Include(x => x.Matches)
-            .ThenInclude(x => x.Sets)
-            .Include(x => x.Teams)
-            .FirstOrDefaultAsync(x => x.Id == tournamentId && x.Status == Status.Finished && x.Matches.Any(x => x.TeamOneId == teamId || x.TeamTwoId == teamId), ct);
     }
 } 

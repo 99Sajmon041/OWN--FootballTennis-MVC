@@ -124,12 +124,6 @@ namespace FootballTennis.Web.Controllers
             }
         }
 
-        public async Task<IActionResult> Statistics(int id, CancellationToken ct)
-        {
-            var model = await tournamentService.GetTournamentStatisticsAsync(id, ct);
-            return View(model);
-        }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = nameof(AdminRole.Admin))]
@@ -147,10 +141,16 @@ namespace FootballTennis.Web.Controllers
             }
         }
 
+        public async Task<IActionResult> Statistics(int id, CancellationToken ct)
+        {
+            var model = await tournamentService.GetTournamentStatisticsAsync(id, ct);
+            return View(model);
+        }
+
         public async Task<IActionResult> TeamStatistics(int teamId, int tournamentId, CancellationToken ct)
         {
-            // nahrat model       
-            return View();
+            var model = await tournamentService.GetTournamentsTeamStatisticsAsync(teamId, tournamentId, ct);
+            return View(model);
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using FootballTennis.Application.Common.Exceptions;
+using FootballTennis.Application.Models.Player;
 using FootballTennis.Application.Models.Tournament;
 using FootballTennis.Application.Services.Interfaces;
 using FootballTennis.Domain.Entities;
 using FootballTennis.Domain.Interfaces;
 using FootballTennis.Shared.Enums;
 using FootballTennis.Shared.Pagination;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 
 namespace FootballTennis.Application.Services.Implementations;
@@ -380,7 +382,7 @@ public sealed class TournamentService(
                 var teamWonSetsInMatch = 0;
                 var isTeamOne = match.TeamOneId == team.Id;
 
-                foreach (var set in match.Sets.Where(x => x.SetNumber <= 2))
+                foreach (var set in match.Sets)
                 {
                     var teamScore = isTeamOne ? set.ScoreTeam1 : set.ScoreTeam2;
                     var opponentScore = isTeamOne ? set.ScoreTeam2 : set.ScoreTeam1;
@@ -388,14 +390,17 @@ public sealed class TournamentService(
                     if (teamScore > opponentScore)
                     {
                         teamWonSetsInMatch++;
-                        wonSets++;
+
+                        if (set.SetNumber != 3)
+                            wonSets++;
                     }
                     else
                     {
-                        pointsInLostSets += teamScore ?? 0;
+                        if (set.SetNumber != 3)
+                            pointsInLostSets += teamScore ?? 0;
                     }
-
-                    setsPlayed++;
+                    if (set.SetNumber != 3)
+                        setsPlayed++;
                 }
 
                 if (teamWonSetsInMatch == 2)
@@ -422,5 +427,82 @@ public sealed class TournamentService(
             .ThenByDescending(x => x.SetsDifference)
             .ThenByDescending(x => x.PointsInLostSets)
             .ToList();
+    }
+
+    public async Task<TournamentsTeamStatisticsViewModel> GetTournamentsTeamStatisticsAsync(int teamId, int tournamentId, CancellationToken ct)
+    {
+        var tournament = await unitOfWork.TournamentRepository.GetTournamentForStatisticAsync(tournamentId, ct);
+        if (tournament is null)
+        {
+            logger.LogWarning("Tournament was not found or is not finished. Tournament ID: {TournamentId}.", tournamentId);
+            throw new NotFoundException("Turnaj nebyl nalezen nebo ještě nebyl vyhodnocen.");
+        }
+
+        var team = tournament.Teams.FirstOrDefault(x => x.Id == teamId);
+        if (team is null)
+        {
+            logger.LogWarning("Team with ID: {TeamId} was not found in tournament ID: {TournamentId}.", teamId, tournamentId);
+            throw new NotFoundException("Tým nebyl v turnaji nalezen.");
+        }
+
+        var players = team.TeamPlayers.Select(x => new PlayerViewModel
+        {
+            Id = x.Player.Id,
+            FullName = x.Player.FullName
+        })
+        .ToList();
+
+        var teams = tournament.Teams.Select(x => new SelectListItem
+        {
+            Text = x.Name,
+            Value = x.Id.ToString()
+        })
+        .ToList();
+
+        var tournamentMatches = tournament.Matches.Where(x => x.TeamOneId == teamId || x.TeamTwoId == teamId).ToList();
+
+        var matches = tournamentMatches.Select(x => new TeamMatchesStatsViewModel
+        {
+            TeamName = x.TeamOneId == team.Id ? x.TeamTwo.Name : x.TeamOne.Name,
+            Sets = x.Sets
+                .OrderBy(s => s.SetNumber)
+                .Select(s => new TeamSetsStatsViewModel
+                {
+                    TeamScore = x.TeamOneId == team.Id ? s.ScoreTeam1 ?? 0 : s.ScoreTeam2 ?? 0,
+                    OpponentScore = x.TeamOneId == team.Id ? s.ScoreTeam2 ?? 0 : s.ScoreTeam1 ?? 0,
+                })
+                .ToList()
+        })
+        .ToList();
+
+        var wonMatches = 0;
+
+        foreach (var match in tournamentMatches)
+        {
+            var teamWonSets = match.Sets.Count(set => match.TeamOneId == team.Id  ? set.ScoreTeam1 > set.ScoreTeam2 : set.ScoreTeam2 > set.ScoreTeam1);
+
+            if (teamWonSets >= 2)
+            {
+                wonMatches++;
+            }
+        }
+
+        var lostMatches = tournamentMatches.Count - wonMatches;
+
+        var teamsStatistics = new TournamentsTeamStatisticsViewModel
+        {
+            TournamentId = tournament.Id,
+            TournamentName = tournament.Name,
+            TeamName = team.Name,
+            TeamId = team.Id,
+            Position = team.Position ?? 0,
+            WonMatches = wonMatches,
+            LostMatches = lostMatches,
+            Players = players,
+            Matches = matches,
+            Teams = teams
+        };
+
+        return teamsStatistics;
     }
 }
