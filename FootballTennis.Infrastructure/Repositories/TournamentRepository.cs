@@ -124,6 +124,7 @@ public sealed class TournamentRepository(FootballTennisDbContext context) : ITou
     public async Task<Tournament?> GetTournamentForEvaluateAsync(int tournamentId, CancellationToken ct)
     {
         return await context.Tournaments
+            .Include(x => x.Teams)
             .Include(x => x.Matches)
             .ThenInclude(x => x.Sets)
             .FirstOrDefaultAsync(x => x.Id == tournamentId && x.Status == Status.InProgress, ct);

@@ -52,6 +52,12 @@ public class MatchService(
         {
             var set = orderedSets[i];
 
+            if (set.ScoreTeam1 == 0 && set.ScoreTeam2 == 0)
+            {
+                set.ScoreTeam1 = null;
+                set.ScoreTeam2 = null;
+            }
+
             bool bothNull = set.ScoreTeam1 is null && set.ScoreTeam2 is null;
             bool oneNull = set.ScoreTeam1 is null || set.ScoreTeam2 is null;
 
@@ -81,12 +87,12 @@ public class MatchService(
                 break;
             }
 
-
             if (oneNull)
             {
                 logger.LogWarning("Set has only one score filled. Match ID: {MatchId}, SetNumber: {SetNumber}.", model.Id, set.SetNumber);
                 throw new ConflictException("Set musí mít vyplněné skóre pro oba týmy, nebo pro oba prázdné.");
             }
+
 
             if (set.ScoreTeam1 < 0 || set.ScoreTeam1 > 25 || set.ScoreTeam2 < 0 || set.ScoreTeam2 > 25)
             {

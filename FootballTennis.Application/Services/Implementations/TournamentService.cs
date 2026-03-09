@@ -412,7 +412,7 @@ public sealed class TournamentService(
             teamsStatistics.Add(new TournamentStatisticsListItemViewModel
             {
                 TeamId = team.Id,
-                Position = team.Position ?? 0,
+                Position = 0,
                 TeamName = team.Name,
                 MatchesPlayed = teamMatches.Count,
                 WonMatches = wonMatches,
@@ -422,11 +422,18 @@ public sealed class TournamentService(
             });
         }
 
-        return teamsStatistics
+        teamsStatistics = teamsStatistics
             .OrderByDescending(x => x.WonMatches)
             .ThenByDescending(x => x.SetsDifference)
             .ThenByDescending(x => x.PointsInLostSets)
             .ToList();
+
+        for (int x = 0; x < teamsStatistics.Count; x++)
+        {
+            teamsStatistics[x].Position = x + 1;
+        }
+
+        return teamsStatistics;
     }
 
     public async Task<TournamentsTeamStatisticsViewModel> GetTournamentsTeamStatisticsAsync(int teamId, int tournamentId, CancellationToken ct)

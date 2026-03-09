@@ -95,38 +95,75 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @{
+                            var wonSetsAtMatches = 0;
+                            var lostSetsAtmatches = 0;
+
+                            var wonPointsIn1Sets = 0;
+                            var lostPointsIn1Sets = 0;
+
+                            var wonPointsIn2Sets = 0;
+                            var lostPointsIn2Sets = 0;
+
+                            var wonPointsIn3Sets = 0;
+                            var lostPointsIn3Sets = 0;
+                        }
+
                         @foreach (var match in Model.Matches)
                         {
                             var wonSets = match.Sets.Count(x => x.TeamScore > x.OpponentScore);
                             var lostSets = match.Sets.Count(x => x.OpponentScore > x.TeamScore);
-                            var matchResultClass = wonSets > lostSets ? "bg-success-subtle text-success-emphasis" : "bg-danger-subtle text-danger-emphasis";
+                            var matchResultClass = wonSets > lostSets
+                            ? "bg-success-subtle text-success-emphasis"
+                            : "bg-danger-subtle text-danger-emphasis";
+
+                            wonSetsAtMatches += wonSets;
+                            lostSetsAtmatches += lostSets;
+
+                            if (match.Sets.Count > 0)
+                            {
+                                wonPointsIn1Sets += match.Sets[0].TeamScore;
+                                lostPointsIn1Sets += match.Sets[0].OpponentScore;
+                            }
+
+                            if (match.Sets.Count > 1)
+                            {
+                                wonPointsIn2Sets += match.Sets[1].TeamScore;
+                                lostPointsIn2Sets += match.Sets[1].OpponentScore;
+                            }
+
+                            if (match.Sets.Count > 2)
+                            {
+                                wonPointsIn3Sets += match.Sets[2].TeamScore;
+                                lostPointsIn3Sets += match.Sets[2].OpponentScore;
+                            }
 
                             <tr>
                                 <td class="fw-semibold">@match.TeamName</td>
 
                                 <td>
-                                    <span class="badge rounded-pill px-3 py-2 @matchResultClass">
+                                    <span class="badge rounded-pill px-3 py-2 @matchResultClass" style="border: 1px solid black;">
                                         @wonSets : @lostSets
                                     </span>
                                 </td>
 
                                 @for (int i = 0; i < 3; i++)
                                 {
-                                    if (i < match.Sets.Count)
+                                    @if (i < match.Sets.Count)
                                     {
                                         var set = match.Sets[i];
-                                        var isNotPlayed = set.TeamScore == 0 && set.OpponentScore == 0;
-                                        var setClass = set.TeamScore > set.OpponentScore
+                                        var wasNotPlayed = set.TeamScore == 0 && set.OpponentScore == 0;
+                                        var setClass = wasNotPlayed
+                                        ? "bg-secondary-subtle text-secondary-emphasis"
+                                        : set.TeamScore > set.OpponentScore
                                         ? "bg-success-subtle text-success-emphasis"
-                                        : set.TeamScore < set.OpponentScore
-                                        ? "bg-danger-subtle text-danger-emphasis"
-                                        : "bg-secondary-subtle text-secondary-emphasis";
+                                        : "bg-danger-subtle text-danger-emphasis";
 
                                         <td>
-                                            @if (isNotPlayed)
+                                            @if (wasNotPlayed)
                                             {
                                                 <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-2">
-                                                    Nehráno
+                                                    Nehrál se
                                                 </span>
                                             }
                                             else
@@ -149,12 +186,36 @@
                             </tr>
                         }
 
-                        <tr class="table-light fw-bold">
-                            <td>Celkem</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
+                        <tr class="table-light fw-bold border-top">
+                            <td class="text-uppercase text-muted small align-middle">Souhrn</td>
+
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span class="small text-muted fw-semibold">Sety celkem</span>
+                                    <span>@wonSetsAtMatches : @lostSetsAtmatches</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span class="small text-muted fw-semibold">1. set</span>
+                                    <span>@wonPointsIn1Sets : @lostPointsIn1Sets</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span class="small text-muted fw-semibold">2. set</span>
+                                    <span>@wonPointsIn2Sets : @lostPointsIn2Sets</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span class="small text-muted fw-semibold">3. set</span>
+                                    <span>@wonPointsIn3Sets : @lostPointsIn3Sets</span>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

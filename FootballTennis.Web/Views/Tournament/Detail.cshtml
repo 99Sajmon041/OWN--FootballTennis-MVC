@@ -220,9 +220,9 @@ else
                                     </td>
                                     <td class="text-center">@match.Order</td>
                                     <td>
-                                        @if (User.IsInRole(nameof(AdminRole.Admin)))
+                                        @if (Model.Status == Status.InProgress)
                                         {
-                                            @if (Model.Status == Status.InProgress)
+                                            @if (User.IsInRole(nameof(AdminRole.Admin)))
                                             {
                                                 <a class="btn btn-sm btn-primary" asp-controller="Match" asp-action="Update" asp-route-tournamentId="@Model.Id" asp-route-id="@match.Id">
                                                     Upravit
@@ -230,13 +230,14 @@ else
                                             }
                                             else
                                             {
-                                                <span class="text-muted">Úprava je dostupná jen během turnaje</span>
+                                                <span class="text-danger fw-bold">Nemáte oprávnění</span>
                                             }
                                         }
                                         else
                                         {
-                                            <span class="text-danger fw-bold">Nemáte oprávnění</span>
+                                            <span class="text-muted fw-bold">Akce již nejsou povoleny</span>
                                         }
+
                                     </td>
                                 </tr>
                             }
