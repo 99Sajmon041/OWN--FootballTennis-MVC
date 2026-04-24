@@ -125,11 +125,7 @@
                         <td>@item.Address</td>
                         <td>@item.Date.ToString("dd.MM.yyyy")</td>
                         <td>@EnumHelper.GetCzechStatusName(item.Status)</td>
-                        <td>
-                            <span class="@(item.WinnerName != null ? "badge bg-gold px-3 py-2 rounded-pill" : "")">
-                                @(item.WinnerName is null ? "Neurčeno" : item.WinnerName)
-                            </span>
-                        </td>
+                        <td>@(item.WinnerName is null ? "Neurčeno" : item.WinnerName)</td>
                         <td>@item.TeamPlayersCount</td>
                         <td>@(item.TeamsCount == 0 ? "Zatím nejsou teamy" : item.TeamsCount)</td>
                         <td>@(item.MatchesCount == 0 ? "Zatím nejsou zápasy" : item.MatchesCount)</td>
