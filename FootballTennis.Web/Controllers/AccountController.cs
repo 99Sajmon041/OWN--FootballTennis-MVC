@@ -3,6 +3,7 @@ using FootballTennis.Application.Models.Account;
 using FootballTennis.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using System.Security.Claims;
 
 namespace FootballTennis.Web.Controllers
@@ -19,6 +20,7 @@ namespace FootballTennis.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [EnableRateLimiting("AuthPolicy")]
         public async Task<IActionResult> Login(LoginViewModel model, CancellationToken ct)
         {
             if (User.Identity?.IsAuthenticated == true)
@@ -34,6 +36,7 @@ namespace FootballTennis.Web.Controllers
                 var loginResult = await accountService.LoginAsync(model, ct);
                 if (!loginResult)
                 {
+                    await Task.Delay(300, ct);
                     ModelState.AddModelError(string.Empty, "Neplatné přihlašovací údaje.");
                     return View(model);
                 }

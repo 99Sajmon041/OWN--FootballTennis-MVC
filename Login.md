@@ -1,4 +1,6 @@
----------------------
-admin@nohejbal.cz
-admin1234
----------------------
+-------------------------
+Email: nohec@nohec.cz
+Pass: Noheyb@ll-*90~ˇ||z
+UserName: Test Admin
+-------------------------
+
