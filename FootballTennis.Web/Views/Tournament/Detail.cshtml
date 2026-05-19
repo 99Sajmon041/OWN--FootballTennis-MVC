@@ -298,8 +298,7 @@ else
                 <form method="post" asp-action="Evaluate" asp-controller="Tournament" asp-route-id="@Model.Id">
                     @Html.AntiForgeryToken()
 
-                    <button type="submit" class="btn btn-success"
-                            disabled="@(!Model.Matches.All(x => x.MatchStatus == MatchStatus.Played))">
+                    <button type="submit" class="btn btn-success" disabled="@(!Model.Matches.All(x => x.MatchStatus == MatchStatus.Played))">
                         Vyhodnotit turnaj
                     </button>
                 </form>

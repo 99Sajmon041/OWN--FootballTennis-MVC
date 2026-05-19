@@ -308,11 +308,15 @@ public sealed class TournamentService(
 
             foreach (var set in match.Sets.OrderBy(x => x.SetNumber))
             {
+                if (teamOneSetsWin == 2 || teamTwoSetsWin == 2)
+                    break;
+
                 if (set.ScoreTeam1 is null || set.ScoreTeam2 is null)
                     break;
-                else if (set.ScoreTeam1 > set.ScoreTeam2)
+
+                if (set.ScoreTeam1 > set.ScoreTeam2)
                     teamOneSetsWin++;
-                else if(set.ScoreTeam1 < set.ScoreTeam2)
+                else if (set.ScoreTeam1 < set.ScoreTeam2)
                     teamTwoSetsWin++;
                 else
                 {
